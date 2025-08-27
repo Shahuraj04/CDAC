@@ -95,7 +95,7 @@ int main()
     Book b2("My life at CDAC", 102, "Shahuraj", 599.99);
     b2.display();
 
-     cout << "\nUsing Getters individually:" << endl;
+     cout << "\nUsing Getters:" << endl;
     cout << "Book Name: " << b2.getBname() << endl;
     cout << "Book ID: " << b2.getId() << endl;
     cout << "Author: " << b2.getAuthor() << endl;
