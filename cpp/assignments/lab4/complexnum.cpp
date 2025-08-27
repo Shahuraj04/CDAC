@@ -64,7 +64,4 @@ int main()
     ComplexNumber c2(4.1, 5.6);
     c2.display();
 
-    cout << "\nUsing getters:" << endl;
-    cout << "Real Part: " << c2.getReal() << endl;
-    cout << "Imaginary Part: " << c2.getImaginary() << endl;
 }
