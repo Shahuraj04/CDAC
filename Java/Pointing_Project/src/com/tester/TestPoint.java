@@ -8,7 +8,7 @@ public class TestPoint {
         Scanner sc = new Scanner(System.in);
         boolean exit = false;
         System.out.print("How many points do you want to add: ");
-      Point2D[] pts = new Point2D[sc.nextInt()]; // ✅ use ()
+      Point2D[] pts = new Point2D[sc.nextInt()];  
         while(!exit) {
         	System.out.println("\n1. Add point ");
         	System.out.println("2.Show Points");

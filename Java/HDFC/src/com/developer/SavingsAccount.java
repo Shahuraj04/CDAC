@@ -15,7 +15,7 @@ public class SavingsAccount extends BankAccount{
 			System.out.println("Insufficeint balance !!");
 		}
 		else 
-			setBalance(getBalance() + amount);
+			setBalance(getBalance() - amount);
 		return getBalance();
 	}
 	

@@ -25,8 +25,12 @@ public class BankAccount{
 		return this.balance;
 	}
 	
-	public String getAccountSummary() {
-			return "Account Number: "+this.accNo+"\nCustomer Name"+this.customerName+"\nBalance: "+this.getBalance()+"\nPhone NUmber: "+this.phNo;
+	public int getAccountNum() {
+		return this.accNo;
+	}
+	
+	public String toString() {
+			return "[Account Number: "+this.accNo+" Customer Name: "+this.customerName+" Balance: "+this.getBalance()+" Phone Number: "+this.phNo+"]";
 		
 	}
 
