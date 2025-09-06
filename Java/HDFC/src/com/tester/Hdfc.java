@@ -104,7 +104,7 @@ class Hdfc {
 
 					if (b != null && num == b.getAccountNum()) {
 
-						out.print(b.toString() + "\n");
+						out.print(b + "\n");
 						found = true;
 						break;
 
