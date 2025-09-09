@@ -11,14 +11,14 @@ public class CurrentAccount extends BankAccount{
 	}
 	
 	
-	public double withdraw(double amount) {
+	public double withdraw(double amount) throws BankException{
 	    if (amount > 0 && (getBalance() - amount) >= -overdraftLimit) {
 	        setBalance(getBalance() - amount); // balance can go negative
 	        System.out.println("Withdrawn: " + amount);
 	        return this.getBalance();
 	    } else {
-	        System.out.println("Withdrawal failed. Overdraft limit exceeded!");
-	        return this.getBalance();
+	    	throw new BankException("Insufficeint balance !!");
+	        
 	    }
 	}
 

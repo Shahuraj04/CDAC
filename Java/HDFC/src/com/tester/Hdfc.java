@@ -17,7 +17,7 @@ import static java.lang.System.*;
 import java.util.Scanner;
 
 class Hdfc {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws BankException {
 		Scanner sc = new Scanner(in);
 		out.print("Enter size of Bank Branch-CDAC:");
 		// create BankAccount array of fixed size
@@ -39,7 +39,7 @@ class Hdfc {
 					int accNo = sc.nextInt();
 					boolean accOver = false;
 					for (BankAccount sa : Customers) {
-						if (sa != null && accNo == sa.getAccountNum()) {
+						if (sa!=null && sa.equals(accNo)) {
 							System.out.print(
 									"We already have bank Account with same account number!!! Try different account number!");
 							accOver = true;
@@ -72,7 +72,7 @@ class Hdfc {
 					int accNo = sc.nextInt();
 					boolean accOver = false;
 					for (BankAccount sa : Customers) {
-						if (sa != null && accNo == sa.getAccountNum()) {
+						if (sa!=null && sa.equals(accNo) ) {
 							System.out.print(
 									"We already have bank Account with same account number!!! Try different account number!");
 							accOver = true;
@@ -144,10 +144,18 @@ class Hdfc {
 
 				for (BankAccount b2 : Customers) {
 					if (b2 != null && num2 == b2.getAccountNum()) {
-
+					
 						out.print("Enter withdraw amount: ");
 						double depAmt = sc.nextDouble();
-						b2.withdraw(depAmt);
+						
+						try{
+							b2.withdraw(depAmt);
+							
+							}
+						catch(BankException b) {
+							out.println(b.getMessage());
+						}
+						
 						found3 = true;
 						break;
 					}
@@ -164,7 +172,8 @@ class Hdfc {
 			}
 
 		}
-
+		sc.close();
 	}
+	
 
 }
