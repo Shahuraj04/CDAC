@@ -1,49 +1,58 @@
 #include <iostream>
 using namespace std;
 
-class Point {
+class Point
+{
 private:
     int x;
     int y;
 
 public:
-      Point() {
+    Point()
+    {
         x = 0;
         y = 0;
     }
 
-      Point(int a, int b) {
+    Point(int a, int b)
+    {
         x = a;
         y = b;
     }
 
-     void setX(int a) {
+    void setX(int a)
+    {
         x = a;
     }
 
-    void setY(int b) {
+    void setY(int b)
+    {
         y = b;
     }
 
-     int getX() {
+    int getX()
+    {
         return x;
     }
 
-    int getY() {
+    int getY()
+    {
         return y;
     }
 
-     void display() {
+    void display()
+    {
         cout << "(" << x << ", " << y << ")" << endl;
     }
 };
 
-int main() {
-     cout << "Default Constructor Object:" << endl;
-    Point p1;   
+int main()
+{
+    cout << "Default Constructor Object:" << endl;
+    Point p1;
     p1.display();
 
-     cout << "\nAfter using setters:" << endl;
+    cout << "\nAfter using setters:" << endl;
     p1.setX(10);
     p1.setY(20);
     p1.display();
@@ -52,9 +61,7 @@ int main() {
     Point p2(5, 15);
     p2.display();
 
-     cout << "\nUsing getters:" << endl;
+    cout << "\nUsing getters:" << endl;
     cout << "X: " << p2.getX() << endl;
     cout << "Y: " << p2.getY() << endl;
-
-     
 }

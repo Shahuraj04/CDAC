@@ -25,7 +25,7 @@ public:
 
     void setName(string n)
     {
-        name = n;   
+        name = n;
     }
 
     void setAge(int a)
@@ -74,9 +74,9 @@ int main()
     p1.setCity("Pune");
     p1.display();
 
-        cout << "\nParameterized Constructor Object:" << endl;
-        Person p2("Tony Wayne", 30, "Mumbai");
-        p2.display();
+    cout << "\nParameterized Constructor Object:" << endl;
+    Person p2("Tony Wayne", 30, "Mumbai");
+    p2.display();
 
     cout << "\nUsing Getters :" << endl;
     cout << "Name: " << p2.getName() << endl;

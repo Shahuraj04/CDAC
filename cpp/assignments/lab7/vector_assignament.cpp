@@ -3,91 +3,49 @@
 #include <algorithm>
 using namespace std;
 
-int main()
-{
+int main() {
+    vector<int> nums;
+    int choice, val;
 
-    vector<int> array_vector;
-    cout << "==========IMPLEMENTING ARRAY FUNCTIONS USING VECTOR==========" << endl;
-
-    do
-    {
-        int choice;
-        cout << "1.Add element to array:" << endl;
-        cout << "2.Show all array elements" << endl;
-        cout << "3.Search element in array" << endl;
-        cout << "4.Sort array:" << endl;
-        cout << "5.Reverse Array" << endl;
-        cout << "6.Clear array:" << endl;
-        cout << "Enter Choice: ";
+    do {
+        cout << "\n--- Menu ---\n";
+        cout << "1.Add  2.Show All  3.Search  4.Sort  5.Reverse  6.Clear  0.Exit\n";
+        cout << "Enter choice: ";
         cin >> choice;
-        switch (choice)
-        {
+
+        switch (choice) {
         case 1:
-            int ele;
-            cout << "\t\t\tEnter Element to be added: ";
-            cin >> ele;
-            array_vector.push_back(ele);
-
+            cout << "Enter value: ";
+            cin >> val;
+            nums.push_back(val);
             break;
-
         case 2:
-            cout << "\t\t\tVector Elements: ";
-            if (array_vector.empty())
-            {
-                cout << "Vector is empty!";
-            }
-            else
-            {
-                for (int ele : array_vector)
-                {
-                    cout << ele << " ";
-                }
-            }
+            cout << "Values: ";
+            for (int x : nums) cout << x << " ";
             cout << endl;
             break;
-
         case 3:
-            int search;
-            cout << "\t\t\tEnter element to search: ";
-            cin >> search;
-            for (int ele : array_vector)
-            {
-                if (ele = search)
-                {
-                    cout << "\t\t\t\tElement found!!!!" << endl;
-                }
-            }
-            break;
-
-        case 4:
-            if (array_vector.empty())
-            {
-                cout << "\t\t\tVector is empty! Cannot sort.\n";
-            }
+            cout << "Enter value to search: ";
+            cin >> val;
+            if (find(nums.begin(), nums.end(), val) != nums.end())
+                cout << "Found!\n";
             else
-            {
-                sort(array_vector.begin(), array_vector.end());
-                cout << "\t\t\tArray sorted successfully!\n";
-            }
+                cout << "Not Found!\n";
+            break;
+        case 4:
+            sort(nums.begin(), nums.end());
+            cout << "Sorted.\n";
             break;
         case 5:
-            if (array_vector.empty())
-            {
-                cout << "\t\t\tVector is empty! Cannot reverse.\n";
-            }
-            else
-            {
-                reverse(array_vector.begin(), array_vector.end());
-                cout << "\t\t\tArray reversed successfully!\n";
-            }
+            reverse(nums.begin(), nums.end());
+            cout << "Reversed.\n";
             break;
-        
-            case 6:
-              array_vector.clear();
-
-        default:
+        case 6:
+            nums.clear();
+            cout << "Vector cleared.\n";
             break;
         }
+    } while (choice != 0);
 
-    } while (true);
+    return 0;
 }
