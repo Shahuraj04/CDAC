@@ -100,9 +100,10 @@ class Hdfc {
 				out.print("Enter Account number: ");
 				int num = sc.nextInt();
 				boolean found = false;
+				
 				for (BankAccount b : Customers) {
 
-					if (b != null && num == b.getAccountNum()) {
+					if (b != null && b.equals(num)) {
 
 						out.print(b + "\n");
 						found = true;
@@ -122,7 +123,7 @@ class Hdfc {
 				boolean found1 = false;
 
 				for (BankAccount b1 : Customers) {
-					if (b1 != null && num1 == b1.getAccountNum()) {
+					if (b1 != null && b1.equals(num1)) {
 
 						out.print("Enter Deposite amount: ");
 						double depAmt = sc.nextDouble();
@@ -141,9 +142,11 @@ class Hdfc {
 				out.print("Enter Account number: ");
 				int num2 = sc.nextInt();
 				boolean found3 = false;
+				BankAccount temp = new BankAccount(num2, 0.0, "", "");
 
 				for (BankAccount b2 : Customers) {
-					if (b2 != null && num2 == b2.getAccountNum()) {
+					
+					if (b2 != null && b2.equals(temp.getAccountNum())) {
 					
 						out.print("Enter withdraw amount: ");
 						double depAmt = sc.nextDouble();

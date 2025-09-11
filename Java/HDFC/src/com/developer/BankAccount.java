@@ -1,5 +1,7 @@
 package com.developer;
 
+
+
 //Fields: accountNumber (int), balance (double) , customer name (String) , phone number (String)
 public class BankAccount {
 	private int accNo;
@@ -28,8 +30,8 @@ public class BankAccount {
 		return this.balance;
 	}
 
-	public int getAccountNum() {
-		return this.accNo;
+	public String getAccountNum() {
+		return ""+this.accNo;
 	}
 
 	public String toString() {
@@ -43,12 +45,16 @@ public class BankAccount {
 		return balance;
 	}
 
-	public boolean equals(int newAcc) {
-		if (getAccountNum() == newAcc) {
-			return true;
-		} else
-			return false;
-
+	@Override
+	public boolean equals(Object o)
+	{
+		System.out.println("in customer equals ");
+		if(o instanceof BankAccount)
+		{
+			BankAccount c=(BankAccount)o;
+			return this.getAccountNum().equals(c.getAccountNum());
+		}
+		return false;
 	}
 
 }
