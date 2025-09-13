@@ -10,7 +10,7 @@ import com.banking.custom_exceptions.BankingException;
  * , phone number (String)
 
  */
-public class BankAccount {
+public class BankAccount implements Comparable<BankAccount>{
 	private int accountNumber;
 	private double balance;
 	private String customerName;
@@ -64,6 +64,12 @@ public class BankAccount {
 	public double getBalance() {
 		return balance;
 	}
+	
+	public void transfer(BankAccount b, double depositeAmt) throws BankingException {
+		b.deposit(depositeAmt);
+		this.withdraw(depositeAmt);
+	}
+	
 
 	public void setBalance(double balance) {
 		this.balance = balance;
@@ -72,12 +78,33 @@ public class BankAccount {
 	@Override
 	public boolean equals(Object o)
 	{
-		System.out.println("in acct equals");
+		
 		if(o instanceof BankAccount)
 		{
 			return this.accountNumber==((BankAccount)o).accountNumber;
 		}
 		return false;
 	}
+	@Override
+	public int compareTo(BankAccount o) {
+		
+		if (this.getAccountNumber()>o.getAccountNumber()){
+		
+			return 1;
+		}
+		return 0;
+		 
+		
+	}
+	public AccountType getAcType() {
+		return acType;
+	}
+	public void setAcType(AccountType acType) {
+		this.acType = acType;
+	}
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+	
 
 }

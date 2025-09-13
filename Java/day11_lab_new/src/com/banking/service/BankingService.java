@@ -14,7 +14,17 @@ public interface BankingService {
 	void withdraw(int accountNo, double amount) throws BankingException;
 	// add a method to deposit funds
 	void deposit(int accountNo, double amount) throws BankingException;
+	
+	String transferFunds(int srcAcct,int desAcct,double amount) throws BankingException;
 
 	void displayAll();
+
+	String closeAccount(int closeId) throws BankingException;
+
+//	void sortByType(String accType, double minAmount) throws BankingException;
+
+	void sortByType(String accType, double minAmount) throws BankingException;
+
+	void sortByAcctNo();
 
 }
