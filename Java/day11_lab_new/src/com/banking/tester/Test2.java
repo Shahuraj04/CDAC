@@ -17,7 +17,7 @@ public class Test2 {
 
 			try {
 				while (!exit) {
-					System.out.println("1. Open account" + "\n2. Get Account Summary" + "\n3. Display All"
+					System.out.print("1. Open account" + "\n2. Get Account Summary" + "\n3. Display All"
 							+ "\n4. withdraw" + "\n5. Deposite" + "\n6. Transfer Funds" + "\n7. Close Account"
 							+ "\n8. Sort Account based on type" + "\n9. Sort by account number");
 					System.out.println("Enter Choice: ");
