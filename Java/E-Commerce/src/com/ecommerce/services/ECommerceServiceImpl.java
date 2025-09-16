@@ -87,7 +87,7 @@ public class ECommerceServiceImpl implements ECommerceService {
 	@Override
 	public void displayAll() {
 		for (Customer c : list) {
-			if (!c.getOrderList().isEmpty()) { // ✅ only show if orders exist
+			if (!c.getOrderList().isEmpty()) { 
 				System.out.println("\nCustomer: " + c.getCustName() + " (" + c.getEmail() + ")");
 				for (OrderItem item : c.getOrderList()) {
 					System.out.println("   " + item);
@@ -125,9 +125,15 @@ public class ECommerceServiceImpl implements ECommerceService {
 
 	}
 
+	public static void validateEmailFormat(String email) throws ECommerceException {
+		String emailRegEx = "^[a-z][a-z0-9._-]*@[a-z]+\\.(com|org|net)$";
+		if (!email.matches(emailRegEx))
+			throw new ECommerceException("Invalid Email Format!!!!");
+	}
 	@Override
 	public void validateEmail(String email) throws ECommerceException {
 
+		validateEmailFormat(email);
 		Customer dummy = new Customer(email);
 		if (list.contains(dummy)) {
 		    throw new ECommerceException("Email already registered!");
