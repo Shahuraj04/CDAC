@@ -9,7 +9,7 @@ import com.ecommerce.core.Customer;
 public interface ECommerceService{
 
 	
-	String registerCustomer(int custId, String custName, String email, String password) throws ECommerceException;
+	String registerCustomer( String custName, String email, String password) throws ECommerceException;
 
 	String customerLogin(String email,String pswd)throws ECommerceException;
 	
@@ -20,4 +20,6 @@ public interface ECommerceService{
 	void addProduct(String prdName,String prdType,double price) throws ECommerceException;
 
 	void showAllprd() throws ECommerceException;
+	void validateEmail(String email) throws ECommerceException;
+
 }

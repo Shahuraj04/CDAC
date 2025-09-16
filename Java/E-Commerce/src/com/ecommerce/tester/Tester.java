@@ -21,7 +21,7 @@ public class Tester {
 							"\n1. Add Product \n2. Display All products \n3. Register Customer.\n4. Customer Login\n5. Place order\n6. View Customer Orders\n7. Exit");
 					System.out.print("\n\tEnter Choice: ");
 					switch (sc.nextInt()) {
-					
+
 					case 1:
 						System.out.print("\nEnter Name: ");
 						String prdName = sc.next();
@@ -29,27 +29,22 @@ public class Tester {
 						String prdType = sc.next();
 						System.out.print("Enter price : ");
 						double prdPrice = sc.nextDouble();
-						ecom.addProduct(prdName,prdType,prdPrice);
+						ecom.addProduct(prdName, prdType, prdPrice);
 						break;
-						
-					
+
 					case 2:
 						ecom.showAllprd();
 						break;
-						
-						
-						
 
 					case 3:
-						System.out.print("Enter Customer id: ");
-						int id = sc.nextInt();
+						
 						System.out.print("Enter Customer Name: ");
 						String name = sc.next();
 						System.out.print("Enter Email: ");
 						String email = sc.next();
 						System.out.print("Enter Password: ");
 						String pswd = sc.next();
-						ecom.registerCustomer(id, name, email, pswd);
+						ecom.registerCustomer( name, email, pswd);
 						break;
 
 					case 4:
@@ -61,7 +56,7 @@ public class Tester {
 						System.out.print(ecom.customerLogin(mail, pass));
 
 						break;
-						
+
 					case 5:
 						System.out.print("Enter Email: ");
 						String ordMail = sc.next();
@@ -71,7 +66,6 @@ public class Tester {
 						int prdQty = sc.nextInt();
 						ecom.placeOrder(ordMail, prdId, prdQty);
 						break;
-						
 
 					case 6:
 						ecom.displayAll();
@@ -80,7 +74,8 @@ public class Tester {
 					}
 
 				} catch (Exception e) {
-					System.out.println(e.getMessage());
+					
+					e.printStackTrace();
 
 				}
 
