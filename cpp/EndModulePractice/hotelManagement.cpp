@@ -83,7 +83,7 @@ int main() {
             cin >> price;
             cout << "No of days: ";
             cin >> no_of_days;
-            cin.ignore(); // FIX for getline
+            cin.ignore(); 
             cout << "Enter amenities: ";
             getline(cin, am);
 
@@ -121,7 +121,7 @@ int main() {
         }
     } while (choice != 4);
 
-    // free memory
+    
     for (auto r : myVector)
         delete r;
 
