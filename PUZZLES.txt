@@ -1,0 +1,22 @@
+PUZZLES
+
+Puzzle 1:For those who didn't understand 
+Price of ball = x
+Price of bat = x+500
+Total price = 510
+Therefore, x+(x+500) = 510
+2x+500 = 510
+or, 2x = 510-500
+or, 2x = 10
+or, x = 10/2
+or, x = 5
+
+Therefore, 
+Price of ball = ₹5
+Price of bat = ₹510 - ₹5 = ₹505
+
+We can also say, 
+₹505 - ₹5 = ₹500
+Therefore, bat's price is ₹500 more than 
+ball's price
+
