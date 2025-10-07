@@ -1,5 +1,7 @@
 package com.mms.services;
 
+import java.util.Map;
+
 import com.mms.movieexception.MovieException;
 
 public interface MovieServices {
