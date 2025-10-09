@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div p:first-child{
+            background-color: blue;
+        }
+        article:last-child{
+            background-color: yellow;
+        }
+        p:nth-child(2){
+            background-color: cadetblue;
+        }
+        p::first-letter{
+            font-size: 40px;
+            font-family: 'Courier New';
+            text-decoration: underline;
+        }
+        a:link{
+            color:green
+        }
+        a:visited{
+            color:blue;
+        }
+        a:active{
+            color:aqua
+        }
+    </style>
+</head>
+<body>
+    <a href="../tabledemo.html">tabledemo</a><br/>
+    <a href="../Listdemo.html">listdemo</a><br/>
+    <p>This is para1</p>
+    <p>This is para2</p>
+    <p class="myclass">This is para3</p>
+    <h1>This is h1 1111</h1>
+    <h1 >This is h1 22222</h1>
+    <h1 class="myclass">This is h1 22222</h1>
+    <div>
+        <p id="myp" >This is para1 inside div</p>
+        <p>This is para2 inside div</p>
+        <h1 class="myclass">This is h1 1111 inside div</h1>
+        <article>
+            <p>This is para1 inside div inside article</p>
+            <p>This is para2 inside div inside article</p>
+            <h1>This is h1 1111inside div inside article</h1>
+            <h1 class="myclass">This is h1 1111inside div inside article</h1>
+            <h2>This is h2inside div inside article</h2>
+        </article>
+    </div>
+    <p>This is para1 outside div after div</p>
+    <p class="myclass">This is para2 outside div after div</p>
+    <h1>This is h1 1111 outside div after div</h1>
+</body>
+</html>

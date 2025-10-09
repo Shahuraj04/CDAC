@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       div p:first-child, ul li{
+          display:inline
+       } 
+       div p:nth-child(2){
+        display:inline-block;
+       }
+       #mydiv{
+         /*display:none;*/
+         visibility:hidden;
+       }
+    </style>
+</head>
+<body>
+    <div id="mydiv">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio corporis, soluta quasi nisi a laboriosam et vel quidem quibusdam ab consequatur accusantium, commodi error debitis expedita. Magnam dolor dolorem minus.
+    </div>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi hic porro itaque sit in, adipisci rem dolores <p>voluptatem ut laboriosam ratione</p> eos facere dicta iure qui <p>saepe, harum ad pariatur?</p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A pariatur dolores quas accusamus molestiae iusto animi magni, maiores quaerat asperiores ratione impedit modi voluptatibus autem aperiam eligendi. Sed, dolor quam!
+    </div>
+    <ul>
+        <li>home</li>
+        <li>about us</li>
+        <li>test</li>
+    </ul>
+    <ol>
+        <li>home1111</li>
+        <li>about us1111</li>
+        <li>test11111</li>
+    </ol>
+</body>
+</html>
