@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <form action="registerdata" method="post">
+            <tr>
+                <td><label for="">Name :</label></td>
+                <td><input type="text" name="nm" id="name"
+                    placeholder="enter name"/></td>
+            </tr>
+            <tr>
+                <td><label for="age">Age</label></td>
+                <td><input type="number" name="age" id="age" placeholder="enter age" min="18" max="60"/></td>
+            </tr>
+            <tr>
+                <td><label for="age">Address</label></td>
+                <td><textarea rows="5" cols="20">This is in textarea</textarea></td>
+            </tr>
+            <tr>
+                <td><label for="bdate">Birth date</label></td>
+                <td><input type="date" name="bdate" id="bdate" placeholder="enter birth date" min="2025-01-01" max="2025-10-15"/></td>
+            </tr>
+            <tr>
+                <td><label>Gender</label></td>
+                <td>
+                    <input type="radio" name="gender" id="male" value="male"/>
+                    <label for="male" >Male</label>
+
+                  <input type="radio" name="gender" id="female" value="female" checked/>
+                  <label for="female" >Female</label>  
+                </td>
+            </tr>
+            <tr>
+                <td><label>Degree</label></td>
+                <td>
+                    <input type="radio" name="degree" id="BE"  value="BE" checked/>
+                    <label for="BE">BE</label>
+                    
+                  <input type="radio" name="degree" id="BTech" value="BTech"/>
+                  <label for="BTech" >BTech</label> 
+                  
+                  
+                  <input type="radio" name="degree" id="MTech" value="MTech" />
+                  <label for="MTech" >MTech</label>
+
+                  <input type="radio" name="degree" id="PHD" value="PHD"/>
+                  <label for="PHD" >PHD</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Skills</label></td>
+                <td>
+                    <input type="checkbox" name="skill" id="Linux"
+                    value="Linux" checked/>
+                    <label for="Linux" >Linux</label>
+                    
+                  <input type="checkbox" name="skill" id="java" value="java"/>
+                  <label for="java" >java</label> 
+                  
+                  <input type="checkbox" name="skill" id="C++" value="C++"  value="python"/>
+                  <label for="C++">C++</label>
+                  <br/>
+                  <input type="checkbox" name="skill" id="Python"  value="python"/>
+                  <label for="Python">Python</label>
+
+                  <input type="checkbox" name="skill" id="React" value="React"/>
+                  <label for="React">React</label>
+
+                  <input type="checkbox" name="skill" id="Javascript" value="javascript"/>
+                  <label for="Javascript" >Javascript
+                  </label>
+                </td>
+            </tr>
+            <tr>
+                <td><label>City</label></td>
+                <td>
+                    <select>
+                        <option value="test">-----select one----</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Banglore">Banglore</option>
+                    </select>
+
+                </td>
+            </tr>
+            <tr>
+                <td><label>Profile</label></td>
+                <td>
+                  <input type="file" name="profile" id="profile"/>
+                </td>
+            </tr>
+            <tr>
+              <td></td>
+                <td>
+                  <input type="hidden" name="type" id="type" value="student"/>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit" name="btn" id="register">Register</button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="reset" name="btn" id="register">Register</button>
+                </td>
+            </tr>
+        </form>
+    </table>
+</body>
+</html>
