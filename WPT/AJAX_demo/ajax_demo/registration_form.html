@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
     <style>
         body {
             align-items: center;
@@ -46,15 +47,21 @@
 
         }
         header{
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-family: "Sofia", sans-serif;
             text-align: center;
             font-size: 50px;
-            color: darkgrey;
+            color: rgb(255, 255, 255);
+        }
+        header:hover{
+            font-family: "Sofia", sans-serif;
+            text-align: center;
+            font-size: 50px;
+            color: rgb(255, 166, 166);
         }
 
 
         button {
-            
+            background-color: aquamarine;
             border-radius: 10px;
             
             height: 50px;
@@ -135,7 +142,7 @@
 </head>
 
 <body>
-    <header>Registeration Form</header>
+    <header class="font-effect-neon">Registeration Form</header>
     <table>
         <form action="registerdata" method="post" onsubmit="return validatedata()">
             <tr>
