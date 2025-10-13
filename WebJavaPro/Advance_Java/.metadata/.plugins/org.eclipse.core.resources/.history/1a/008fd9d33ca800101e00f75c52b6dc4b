@@ -1,0 +1,12 @@
+package com.db.tester;
+
+import java.sql.Connection;
+import static com.db.utils.DBUtils.*;
+public class gettingData {
+	public static void main(String[] args) {
+		try(
+				Connection cn=openConnection();
+				){}
+		
+	}
+}

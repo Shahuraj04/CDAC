@@ -1,0 +1,19 @@
+package com.db.tester;
+
+import static com.db.util.DBUtils.openConnection;;
+
+import java.sql.Connection;
+
+public class TestConnection {
+
+	public static void main(String[] args) {
+		try (Connection cn = openConnection()) {
+			System.out.println("Connected to DB " +cn);
+		} //JVM - cn.close() - release DB resource.
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}
