@@ -11,9 +11,9 @@ public class gettingData {
 	public static void main(String[] args) throws SQLException, ClassNotFoundException {
 		try (Connection cn = openConnection();
 				Statement st = cn.createStatement();
-				ResultSet rst = st.executeQuery("select * from data")) {
+				ResultSet rst = st.executeQuery("select * from patients ")) {
 		while(rst.next()) {
-			System.out.printf("Id %d Name %s Dob %s %n",rst.getInt(1),rst.getString(2),rst.getString(3));
+			System.out.printf("Id %d Name %s Dob %s %n",rst.getInt(1),rst.getString(2),rst.getString(6));
 		}
 		}
 
