@@ -33,6 +33,7 @@ public class Login extends HttpServlet {
 			String password = request.getParameter("pass");
 			HealthDao dr =new HealthDaoImpl();
 		 Patient p	=dr.PatientSignIn(mail, password);
+		 
 			if(p!=null) {
 				pw.print("Success");
 			}
