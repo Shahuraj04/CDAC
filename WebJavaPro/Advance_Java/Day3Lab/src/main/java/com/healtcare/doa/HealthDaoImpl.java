@@ -8,14 +8,16 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
+import com.healthcare.pojo.Appointments;
 import com.healthcare.pojo.Patient;
 
 public class HealthDaoImpl implements HealthDao {
 
 	private Connection cn;
-	private PreparedStatement ps1, ps2, ps3, cs1;
+	private PreparedStatement ps1, ps2, ps3, cs1,ps4;
 
 	public HealthDaoImpl() throws SQLException {
 		cn = openConnection();
@@ -23,6 +25,7 @@ public class HealthDaoImpl implements HealthDao {
 		ps2 = cn.prepareStatement("select * from patients where dob between ? and ?");
 		ps3 = cn.prepareStatement("delete from patients where id=?");
 		cs1 = cn.prepareCall("{call addAppointment(?,?,?)}");
+		ps4=cn.prepareCall("select * from appointments");
 
 	}
 
@@ -78,8 +81,8 @@ public class HealthDaoImpl implements HealthDao {
 		cs1.setInt(1, doc_id);
 		cs1.setInt(2, p_id);
 
-		java.sql.Timestamp d1 = java.sql.Timestamp.valueOf(date);
-		cs1.setTimestamp(3, d1);
+		java.sql.Date d1 = java.sql.Date.valueOf(date);
+		cs1.setDate(3, d1);
 
 		int rows = cs1.executeUpdate();
 
@@ -87,6 +90,17 @@ public class HealthDaoImpl implements HealthDao {
 			return "Appointment added successfully!";
 		else
 			return "Failed to add appointment.";
+	}
+	@Override
+	public List<Appointments> showappointments() throws SQLException {
+		List<Appointments> list = new ArrayList<>();
+		try(ResultSet rs = ps4.executeQuery()){
+			while(rs.next()) {
+				list.add(new Appointments(rs.getInt(2), rs.getInt(3), rs.getDate(4),"SCHEDULED"));
+			}
+			
+		}
+		return list;
 	}
 
 	@Override
@@ -108,5 +122,7 @@ public class HealthDaoImpl implements HealthDao {
 		}
 
 	}
+
+	
 
 }

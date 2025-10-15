@@ -44,7 +44,8 @@ public class AddApponintment extends HttpServlet {
 			int id3=Integer.parseInt(s3);
 			HealthDao dr =  new HealthDaoImpl();
 			
-			String result  = dr.addAppointment(id2, id3, s4); 
+			String result  = dr.addAppointment(id2, id3, s4);
+			pw.write(result);
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

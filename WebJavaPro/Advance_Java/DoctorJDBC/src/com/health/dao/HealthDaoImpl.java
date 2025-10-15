@@ -79,8 +79,8 @@ public class HealthDaoImpl implements HealthDao {
 		cs1.setInt(1, doc_id);
 		cs1.setInt(2, p_id);
 
-		java.sql.Timestamp d1 = java.sql.Timestamp.valueOf(date);
-		cs1.setTimestamp(3, d1);
+		java.sql.Date d1 = java.sql.Date.valueOf(date);
+		cs1.setDate(3, d1);
 
 		int rows = cs1.executeUpdate();
 

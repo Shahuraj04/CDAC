@@ -3,6 +3,7 @@ package com.healtcare.doa;
 import java.sql.SQLException;
 import java.util.List;
 
+import com.healthcare.pojo.Appointments;
 import com.healthcare.pojo.Patient;
 
 public interface HealthDao {
@@ -11,7 +12,7 @@ public interface HealthDao {
 	public List<Patient> displayByDob(String startDate,String endDate) throws SQLException;
 	public String deleltePatient(int id) throws SQLException;
 	public String addAppointment(int doc_id,int p_id,String date) throws SQLException;
-	
+	public List<Appointments> showappointments() throws SQLException; 
 	public void closeRes() throws SQLException;
 	
 }

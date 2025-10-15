@@ -16,7 +16,7 @@ public class AppointmentTester {
 			System.out.println("Enter Patient Id: ");
 			int pid = sc.nextInt();
 			sc.nextLine();
-			System.out.println("Enter appointment date(yyyy-mm-dd hh:mm:ss): ");
+			System.out.println("Enter appointment date: ");
 			String  dt= sc.nextLine();
 			System.out.println(dr.addAppointment(did, pid, dt));
 			
