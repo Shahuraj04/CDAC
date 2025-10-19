@@ -9,7 +9,7 @@ public enum Source {
 //	| Hyderabad
 //
 	
-	MUMBAI,BANGLORE,DELHI,CHENNAI,KOLKATA,HYDERABAD;
+	MUMBAI,BANGALORE,DELHI,CHENNAI,KOLKATA,HYDERABAD;
 	@Override
 	public String toString() {
 		return name() ;

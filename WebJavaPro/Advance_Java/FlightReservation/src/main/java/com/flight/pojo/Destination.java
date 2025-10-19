@@ -13,7 +13,7 @@ public enum Destination {
 //	| Kochi       |
 //	| Indore   
 //
-	DELHI,KOLKATA,MUMBAI,HYDERABAD,BANGLORE,GOA,CHENNAI,AHMEDABAD,KOCHI,INDORE;
+	DELHI,KOLKATA,MUMBAI,HYDERABAD,BANGALORE,GOA,CHENNAI,AHMEDABAD,KOCHI,INDORE;
 	@Override
 	public String toString() {
 		return name() ;
