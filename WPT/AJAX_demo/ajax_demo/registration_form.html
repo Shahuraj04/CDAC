@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <style>
+        body {
+            align-items: center;
+            align-self: center;
+            background-color: rgb(0, 94, 109);
+
+
+        }
+
+        .title {
+            color: darkcyan;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            
+        }
+
+        .error {
+            color: red;
+        }
+
+        input {
+            background-color: rgb(246, 255, 242);
+            border: 1px solid black;
+        }
+
+        table {
+            margin: auto;
+            margin-top: 75px;
+            background-color: rgb(255, 245, 244);
+            padding: 50px;
+            border: 1px solid red;
+            align-self: center;
+            box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);
+
+            font-weight: bold;
+            height: 500px;
+            width: 1080px;
+            border-radius: 50px;
+            border-spacing: 0 10px;
+
+        }
+        header{
+            font-family: "Sofia", sans-serif;
+            text-align: center;
+            font-size: 50px;
+            color: rgb(255, 255, 255);
+        }
+        header:hover{
+            font-family: "Sofia", sans-serif;
+            text-align: center;
+            font-size: 50px;
+            color: rgb(255, 166, 166);
+        }
+
+
+        button {
+            background-color: aquamarine;
+            border-radius: 10px;
+            
+            height: 50px;
+            width: 100px;
+        }
+        button:hover{
+            background-color: #3fffbf;
+            box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+    <script>
+        function validateCheckbox(nm, errid, cnt) {
+            var arr = document.getElementsByName(nm);
+            var count = 0;
+            var str = "";
+
+            for (let v of arr) {
+                if (v.checked) {
+                    count++;
+                    str += v.value;
+                }
+            }
+            console.log("selected checkboxes : " + str)
+            if (count >= cnt) {
+                document.getElementById(errid).innerHTML = "";
+                return true;
+            }
+            document.getElementById(errid).innerHTML = "Pls select minimum " + cnt + " " + nm;
+            return false;
+        }
+
+        //validate radio button is selected or not
+        function validateRadioButton(nm, errid) {
+            var arr = document.getElementsByName(nm);
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i].checked) {
+                    document.getElementById(errid).innerHTML = "";
+                    return true;
+                }
+            }
+            document.getElementById(errid).innerHTML = "pls select one " + nm;
+            return false;
+        }
+
+        //validate dropdownbox
+        function validateDropDown(id, errid) {
+            var city = document.getElementById(id).value;
+            if (city === "test") {
+                document.getElementById("errcity").innerHTML = "Pls select city";
+                return false;
+            }
+            document.getElementById("errcity").innerHTML = "";
+            return true;
+        }
+        function validateFile(id, errid) {
+            //files property returns array of selected files
+            var farr = document.getElementById(id).files;
+            console.log(farr);
+            //alert(farr[0].size/1024+"KB");
+            if (farr.length === 0) {
+                document.getElementById(errid).innerHTML = "pls select minimum one file"
+                return false;
+            }
+            document.getElementById(errid).innerHTML = "";
+            return true;
+        }
+
+        function validatedata() {
+            var flag1 = validateCheckbox("skill", "errskill", 3);
+            var flag2 = validateRadioButton("degree", "errdegree");
+            var flag3 = validateRadioButton("gender", "errgender");
+            var flag4 = validateDropDown("city", "errcity")
+            var flag5 = validateFile("profile", "errprofile")
+            return flag1 && flag2 && flag3 && flag4 && flag5;
+        }
+    
+    </script>
+</head>
+
+<body>
+    <header class="font-effect-neon">Registeration Form</header>
+    <table>
+        <form action="registerdata" method="post" onsubmit="return validatedata()">
+            <tr>
+                <td><label for="" class="title">Name :</label></td>
+                <td><input type="text" name="nm" id="name" placeholder="enter name" /></td>
+            </tr>
+            <tr>
+                <td><label for="age" class="title">Age</label></td>
+                <td><input type="number" name="age" id="age" placeholder="enter age" min="18" max="60" /></td>
+            </tr>
+            <tr>
+                <td><label for="age" class="title">Address</label></td>
+                <td><textarea rows="5" cols="20">This is in textarea</textarea></td>
+            </tr>
+            <tr>
+                <td><label for="bdate" class="title">Birth date</label></td>
+                <td><input type="date" name="bdate" id="bdate" placeholder="enter birth date" min="2025-01-01"
+                        max="2025-10-15" /></td>
+            </tr>
+            <tr>
+                <td><label class="title">Gender</label></td>
+                <td>
+                    <input type="radio" name="gender" id="male" value="male" />
+                    <label for="male">Male</label>
+
+                    <input type="radio" name="gender" id="female" value="female" />
+                    <label for="female">Female</label>
+                </td>
+                <td class="error" id="errgender"></td>
+            </tr>
+            <tr>
+                <td><label class="title">Degree</label></td>
+                <td>
+                    <input type="radio" name="degree" id="BE" value="BE" />
+                    <label for="BE">BE</label>
+
+                    <input type="radio" name="degree" id="BTech" value="BTech" />
+                    <label for="BTech">BTech</label>
+
+
+                    <input type="radio" name="degree" id="MTech" value="MTech" />
+                    <label for="MTech">MTech</label>
+
+                    <input type="radio" name="degree" id="PHD" value="PHD" />
+                    <label for="PHD">PHD</label>
+                </td>
+                <td class="error" id="errdegree"></td>
+            </tr>
+            <tr>
+                <td><label class="title">Skills</label></td>
+                <td>
+                    <input type="checkbox" name="skill" id="Linux" value="Linux" checked />
+                    <label for="Linux">Linux</label>
+
+                    <input type="checkbox" name="skill" id="java" value="java" />
+                    <label for="java">java</label>
+
+                    <input type="checkbox" name="skill" id="C++" value="C++" value="python" />
+                    <label for="C++">C++</label>
+                    <br />
+                    <input type="checkbox" name="skill" id="Python" value="python" />
+                    <label for="Python">Python</label>
+
+                    <input type="checkbox" name="skill" id="React" value="React" />
+                    <label for="React">React</label>
+
+                    <input type="checkbox" name="skill" id="Javascript" value="javascript" />
+                    <label for="Javascript">Javascript
+                    </label>
+                </td>
+                <td class="error" id="errskill"></td>
+            </tr>
+            <tr>
+                <td><label class="title">City</label></td>
+                <td>
+                    <select name="city" id="city">
+                        <option value="test">-----select one----</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Banglore">Banglore</option>
+                    </select>
+
+                </td>
+                <td class="error" id="errcity"></td>
+            </tr>
+            <tr>
+                <td><label class="title">Profile</label></td>
+                <td>
+                    <input type="file" name="profile" id="profile" />
+                </td>
+                <td class="error" id="errprofile"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="hidden" name="type" id="type" value="student" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit" name="btn" id="register">Register</button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="reset" name="btn" id="register">Reset</button>
+                </td>
+            </tr>
+        </form>
+    </table>
+</body>
+
+</html>
