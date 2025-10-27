@@ -131,6 +131,17 @@ delimiter;
 
 
 
+DELIMITER //
+CREATE PROCEDURE addAppointment(
+    IN v_did INT,
+    IN v_pid INT,
+    IN v_date DATE
+  
+)
+BEGIN
+    INSERT INTO appointments VALUES (v_did, v_pid, v_date, Scheduled);
+END //
+DELIMITER ;
 
 
 

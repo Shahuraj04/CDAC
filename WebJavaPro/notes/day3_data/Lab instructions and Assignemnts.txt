@@ -115,6 +115,8 @@ Book an appointment
 i/p - doctor_id, patient_id, appointment_datetime
 o/p - a message (booking successful or failed)
 
+ id | doctor_id | patient_id | appointment_datetime | status    |
+
 
 Day 3
 Important Tip 

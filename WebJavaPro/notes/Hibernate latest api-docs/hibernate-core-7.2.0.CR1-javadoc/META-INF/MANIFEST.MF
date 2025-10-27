@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Specification-Title: hibernate-core
+Specification-Version: 7.2.0.CR1
+Specification-Vendor: Hibernate.org
+Implementation-Title: hibernate-core
+Implementation-Version: 7.2.0.CR1
+Implementation-Vendor: Hibernate.org
+Implementation-Vendor-Id: org.hibernate
+Implementation-Url: https://hibernate.org/orm
+Hibernate-VersionFamily: 7.2
+Hibernate-JpaVersion: 3.2
+Bundle-Vendor: Hibernate.org
+Bundle-DocURL: https://hibernate.org/orm/releases/7.2
+

@@ -25,7 +25,7 @@ CREATE TABLE appointments (
     id INT PRIMARY KEY AUTO_INCREMENT,
     doctor_id INT NOT NULL,
     patient_id INT NOT NULL,
-    appointment_datetime date NOT NULL,
+    appointment_datetime timestamp NOT NULL,
     status VARCHAR(20) DEFAULT 'SCHEDULED',
     UNIQUE(doctor_id,  appointment_datetime), 
     FOREIGN KEY (doctor_id) REFERENCES doctors(id),
@@ -53,22 +53,40 @@ INSERT INTO patients (name, email, password, phone,dob) VALUES
 INSERT INTO appointments (doctor_id, patient_id, appointment_datetime) VALUES
 # Dr. Anjali Sharma (Cardiology)
 (1, 1, '2025-10-01'),
-(1, 2, '2025-10-01'),
-(1, 3, '2025-10-01'),
+(1, 2, '2025-11-01'),
+(1, 3, '2025-12-01'),
 
 # Dr. Rajesh Kumar (Dermatology)
-(2, 4, '2025-10-01'),
+(2, 4, '2025-11-01'),
 (2, 5, '2025-10-01'),
 
 # Dr. Priya Singh (Pediatrics)
-(3, 1, '2025-10-02'),
+(3, 1, '2025-11-02'),
 (3, 2, '2025-10-02'),
 
 # Dr. Amit Verma (Orthopedics)
-(4, 3, '2025-10-03'),
+(4, 3, '2025-11-03'),
 (4, 4, '2025-10-03'),
 
 # Dr. Sneha Reddy (Neurology)
-(5, 5, '2025-10-04'),
+(5, 5, '2025-12-04'),
 (5, 1, '2025-10-04');
+
+
+
+delimiter //
+create procedure(in v_did int,in v_pid int , in v_date date)
+begin
+	insert into appointments values(v_did,v_pid,date,"SCHEDULED");
+end//
+delimiter ;
+
+
+
+
+
+
+
+
+
 

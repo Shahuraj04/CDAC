@@ -1,0 +1,6 @@
+ create procedure getMin(in deptno int,out minsal double(9,2))
+begin
+select min(sal) into minsal
+from emp e
+where e.deptno=deptno;
+end //
