@@ -21,12 +21,6 @@ import jakarta.servlet.http.HttpSession;
  */
 @WebServlet(value = "/authenticate", loadOnStartup = 1)
 public class PatientLoginServlet extends HttpServlet {
-	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		super.doGet(req, resp);
-	}
-
 	private static final long serialVersionUID = 1L;
 	// state - final | effectively final - immutable state => inherently thread safe
 	private PatientDao patientDao;

@@ -10,7 +10,6 @@ public interface PatientDao {
 	Patient signIn(String email, String password) throws SQLException;
 	List<Appointments> showAllAppointments(int id) throws SQLException;
 	public String addAppointment(int doc_id,int p_id,String date) throws SQLException;
-	String deleteAppointment(int id) throws SQLException; 
 	void cleanUp() throws SQLException;
 
 }

@@ -36,8 +36,8 @@ public class BookAppointment extends HttpServlet {
 	
 		 String docId = request.getParameter("docid");
 		 PatientDao pd = new PatientDaoImpl();
+		 System.out.println(inputdate);
 		 String msg = pd.addAppointment(Integer.parseInt(docId), p.getId(), inputdate);
-		 
 		pw.print(msg);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

@@ -22,8 +22,7 @@ import jakarta.servlet.http.HttpSession;
 @WebServlet("/patient_dashboard")
 public class PatientDashboardServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
-	/**
+		/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
@@ -43,23 +42,14 @@ public class PatientDashboardServlet extends HttpServlet {
 				pw.print("<h5> Patient details from HttpSession " + patient + "</h5>");
 				Patient p = (Patient) hs.getAttribute("patient_details");
 				List<Appointments> list =    pat.showAllAppointments(p.getId());
-				pw.print("<style>\r\n"
-						+ "        table,\r\n"
-						+ "        th,\r\n"
-						+ "        td {\r\n"
-						+ "            border: 1px solid black;\r\n"
-						+ "        }\r\n"
-						+ "    </style>");
 				pw.print("<table style='border:2px solid black;padding:8px,margin:8px' >");
-				pw.print("<tr><td style:'border: 1px solid black'>AppointmentId</<td>"
+				pw.print("<tr><td>AppointmentId</<td>"
 						+ "<td>Date Time</td>"
-						+"<td>Doc name</td>"+"<td></td>"+"</tr>");
+						+"<td>Doc name</td>"+"</tr>");
 				for(Appointments a : list) {
-					pw.print("<tr><td>" + a.getId() + "</td>"
-					        + "<td>" + a.getDate() + "</td>"
-					        + "<td>" + a.getDname() + "</td>"
-					        + "<td><a href='cancel?id=" + a.getId() + "&date=" + a.getDate() + "' class='button'>Cancel</a></td></tr>");
-
+					pw.print("<tr><td>"+a.getId()+"</<td>"
+							+ "<td>"+a.getDate()+"</td>"
+							+"<td>"+a.getDname()+"</td>"+"</tr>");
 				}
 				pw.print("</table>");
 				pw.print("<button type='button'><a href='bookappointment.html'>BookAppointment</button>");

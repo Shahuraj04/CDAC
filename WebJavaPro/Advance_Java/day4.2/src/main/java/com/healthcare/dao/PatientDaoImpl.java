@@ -17,7 +17,7 @@ import com.healthcare.pojos.Patient;
 public class PatientDaoImpl implements PatientDao {
 	// state
 	private Connection cn;
-	private PreparedStatement pst1,pst2,cs1,pst3;
+	private PreparedStatement pst1,pst2,cs1;
 	
 
 	public PatientDaoImpl() throws SQLException {
@@ -30,7 +30,6 @@ public class PatientDaoImpl implements PatientDao {
 		pst2= cn.prepareStatement("select a.*,d.name  from  Appointments a join Doctors d on a.doctor_id = d.id where patient_id=?");
 		System.out.println("patient dao created");
 		cs1 = cn.prepareCall("{call addAppointment(?,?,?)}");
-		pst3=cn.prepareCall("delete from appointments where id=?");
 		
 	}
 
@@ -89,15 +88,6 @@ public class PatientDaoImpl implements PatientDao {
 		closeConnection();
 		System.out.println("patient dao cleaned up");
 
-	}
-
-	@Override
-	public String deleteAppointment(int id) throws SQLException {
-		pst3.setInt(1, id);
-		if(pst3.executeUpdate()>0) {
-			return "deleted";
-		}
-		return "not found";
 	}
 
 	
