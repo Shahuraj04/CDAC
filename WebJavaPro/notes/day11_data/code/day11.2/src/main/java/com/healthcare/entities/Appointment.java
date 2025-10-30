@@ -31,6 +31,9 @@ import lombok.ToString;
 @ToString(callSuper = true, exclude = { "myDoctor", "myPatient" })
 public class Appointment extends BaseEntity {
 
+	public Appointment(LocalDateTime dateTime) {
+		// TODO Auto-generated constructor stub
+	}
 	@Column(name = "appointment_date_time")
 	private LocalDateTime appointmentDateTime;
 	@Enumerated(EnumType.STRING)

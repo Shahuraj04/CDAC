@@ -19,11 +19,12 @@ public class LoginTester {
 		try (Scanner sc = new Scanner(System.in); SessionFactory sf = getFactory()) {
 			// create user dao instance
 			AppointmentDao userDao = new AppointmentDaoImpl();
-			System.out.println("Enter Email: ");
-			String em = sc.next();
-			System.out.println("Enter password: ");
-			String pswd = sc.next();
-			System.out.println(userDao.bookAppointment(null, null, null));
+			System.out.println("Enter Doctor id: ");
+			Long doc_id = sc.nextLong();
+			System.out.println("Enter Patient id: ");
+			Long pat_id = sc.nextLong();
+			
+			System.out.println(userDao.bookAppointment(LocalDateTime.now(), doc_id ,pat_id));
 
 		} catch (Exception e) {
 			e.printStackTrace();
