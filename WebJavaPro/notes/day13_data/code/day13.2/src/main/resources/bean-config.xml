@@ -13,7 +13,7 @@
 		lazy-init="true" />
 	<!-- sc prototype -->
 	<bean id="sc" class="com.cdac.dependency.ScienceTeacher"
-		scope="prototype"/>
+		scope="prototype" />
 	<!-- dependent bean -->
 	<!-- public_school singleton n eager -->
 	<bean id="public_school" class="com.cdac.dependent.PublicSchool"

@@ -58,6 +58,7 @@ public class AppointmentDaoImpl implements AppointmentDao {
 	public String cancelAppointment(Long appointmentId, Long patientId) {
 		Session session = getFactory().getCurrentSession();
 		Transaction tx = session.beginTransaction();
+		
 		try {
 			
 			
