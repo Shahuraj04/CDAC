@@ -54,4 +54,26 @@ public class RestaurantServiceImpl implements RestaurantService {
 		
 	}
 
+	@Override
+	public Restaurant getDetailsById(Long restaurantId) {
+		Restaurant restaurant= restaurantDao.findById(restaurantId).orElseThrow(()->new ResourceNotFound("NO restaurant found with given ID"));
+		return restaurant;
+	}
+
+	@Override
+	public Restaurant updateDetails(Long restaurantId, Restaurant updatedRestaurant) {
+
+	    Restaurant existing = restaurantDao.findById(restaurantId)
+	            .orElseThrow(() -> new ResourceNotFound("Restaurant Not Found"));
+
+	    // Update fields
+	    existing.setName(updatedRestaurant.getName());
+	    existing.setAddress(updatedRestaurant.getAddress());
+	    existing.setCity(updatedRestaurant.getCity());
+	    existing.setDescription(updatedRestaurant.getDescription());
+
+	    return restaurantDao.save(existing);
+	}
+
+
 }

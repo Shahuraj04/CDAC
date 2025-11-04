@@ -2,6 +2,9 @@ package com.cdac.controller;
 
 import java.util.List;
 import com.cdac.services.RestaurantServiceImpl;
+
+import io.micrometer.core.ipc.http.HttpSender.Response;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
@@ -10,10 +13,12 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.web.service.annotation.PutExchange;
+import com.cdac.Day16BackendApplication;
 import com.cdac.customExceptions.ResourceAlreadyExistException;
 import com.cdac.customExceptions.ResourceNotFound;
 import com.cdac.dao.RestaurantDao;
@@ -24,6 +29,8 @@ import com.cdac.services.RestaurantService;
 @RequestMapping("/restaurants")
 public class RestaurantController {
 
+    private final Day16BackendApplication day16BackendApplication;
+
     private final RestaurantServiceImpl restaurantServiceImpl;
 
 	private final TestController testController;
@@ -33,10 +40,11 @@ public class RestaurantController {
 	@Autowired
 	private RestaurantService restaurantService;
 
-	RestaurantController(RestaurantDao restaurantDao, TestController testController, RestaurantServiceImpl restaurantServiceImpl) {
+	RestaurantController(RestaurantDao restaurantDao, TestController testController, RestaurantServiceImpl restaurantServiceImpl, Day16BackendApplication day16BackendApplication) {
 		this.restaurantDao = restaurantDao;
 		this.testController = testController;
 		this.restaurantServiceImpl = restaurantServiceImpl;
+		this.day16BackendApplication = day16BackendApplication;
 	}
 
 	@GetMapping()
@@ -89,5 +97,31 @@ public class RestaurantController {
 					}
 		
 	}
+	@GetMapping("/{restaurantId}")
+	public ResponseEntity<?> getDetailsById(@PathVariable Long restaurantId){
+			System.out.println("In get details");
+			try {
+				Restaurant detailsById = restaurantService.getDetailsById(restaurantId);
+				return ResponseEntity.status(HttpStatus.OK).body(detailsById);
+			} catch (RuntimeException e) {
+				return ResponseEntity.notFound().build();
+			}
+			
+	}
+	@PutMapping("/{restaurantId}")
+	public ResponseEntity<?> updateDetails(@PathVariable Long restaurantId,
+	                                       @RequestBody Restaurant updatedRestaurant) {
+
+	    System.out.println("In Update method of " + restaurantId);
+	    try {
+	        Restaurant updated = restaurantService.updateDetails(restaurantId, updatedRestaurant);
+	        return ResponseEntity.ok(updated); // SC 200 with updated restaurant JSON
+	    } catch (ResourceNotFound e) {
+	        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+	    }
+	}
+
+	
+	
 
 }

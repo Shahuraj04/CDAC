@@ -11,5 +11,9 @@ public interface RestaurantService {
 	String addRestaurant(Restaurant newRestaurant);
 
 	String deleteRestaurant(Long restaurantId);
+
+	Restaurant getDetailsById(Long restaurantId);
+
+	Restaurant updateDetails(Long restaurantId, Restaurant updatedRestaurant);
 	
 }
