@@ -1,15 +1,13 @@
-package com.cdac.services;
+package com.cdac.service;
 
 import java.util.List;
 
 import com.cdac.entities.Restaurant;
 
 public interface RestaurantService {
-
-	List<Restaurant> getList();
+	List<Restaurant> getAllAvailableRestaurants();
 
 	String addRestaurant(Restaurant newRestaurant);
 
-	String deleteRestaurant(Long restaurantId);
-	
+	String deleteDetails(Long restaurantId);
 }

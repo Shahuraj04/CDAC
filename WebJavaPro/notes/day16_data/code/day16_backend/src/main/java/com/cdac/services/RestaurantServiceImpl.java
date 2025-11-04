@@ -1,11 +1,13 @@
 package com.cdac.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.cdac.customExceptions.ResourceAlreadyExistException;
+import com.cdac.customExceptions.ResourceNotFound;
 import com.cdac.dao.RestaurantDao;
 import com.cdac.entities.Restaurant;
 
@@ -41,6 +43,14 @@ public class RestaurantServiceImpl implements RestaurantService {
 		}
 		
 		
+		
+	}
+
+	@Override
+	public String deleteRestaurant(Long restaurantId) {
+		Restaurant restaurantNew = restaurantDao.findById(restaurantId).orElseThrow(()->new ResourceNotFound("Restaurant not found with given id"));
+		restaurantNew.setStatus(false);
+		return "soft deleted";
 		
 	}
 
