@@ -51,7 +51,7 @@ public class Patient  extends BaseEntity{
 	 *  - init it always to an empty Collection(to avoid NullPointerExc)
 	 */
 	//Patient *----->* DiagTest - many to -many , uni dir association
-	@ManyToMany /* (fetch = FetchType.EAGER) */ //mandatory - avoids MappingExc.
+	@ManyToMany (cascade = CascadeType.ALL, fetch = FetchType.EAGER)/* (fetch = FetchType.EAGER) */ //mandatory - avoids MappingExc.
 	@JoinTable(name="patient_tests",joinColumns = @JoinColumn(name="patient_id"),inverseJoinColumns = @JoinColumn(name="test_id")) //optional 
 	private Set<DiagnosticTest> diagnosticTests=new HashSet<>();
 	public Patient(Gender gender, BloodGroup bloodGroup, String familyHistory) {

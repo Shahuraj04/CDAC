@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-//one of the annotations is @SpringBootConfiguration => it's configuration class where you can add @bean method to declare spring beans
+//one of the annotations - @SpringBootConfiguration => it's Spring boot config class , where you can add @Bean methods to declare spring beans
 public class HealtcareBackendApplication {
 
 	public static void main(String[] args) {
@@ -16,7 +16,7 @@ public class HealtcareBackendApplication {
 	}
 
 	// configure ModelMapper class as a spring bean
-	@Bean // exactly equivalent to <bean id=....>
+	@Bean // exactly equivalent to - <bean id......../>
 	ModelMapper modelMapper() {
 		ModelMapper mapper = new ModelMapper();
 		mapper.getConfiguration() // get default config

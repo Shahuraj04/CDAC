@@ -32,10 +32,10 @@ Failure Resp - SC 401 ApiResp DTO(status : succes | failure , timestamp , messag
 
 	 */
 	@PostMapping("/signin")
-	public ResponseEntity<?> userAuthentication(@RequestBody AuthRequest dto)
+	public /* @ResponseBody */ ResponseEntity<?> userAuthentication(@RequestBody AuthRequest dto)
 	{
 		System.out.println("in user auth "+dto);
-		//invoker service layewr method
+		//invoker service layer method
 		try {
 			return ResponseEntity.ok(userService.signIn(dto));
 		} catch (RuntimeException e) {
@@ -43,9 +43,6 @@ Failure Resp - SC 401 ApiResp DTO(status : succes | failure , timestamp , messag
 					.body(new ApiResponse(e.getMessage(), "failed"));
 		}
 	}
-	/*
-	 * 
-	 * 
-	 * */
+	
 
 }

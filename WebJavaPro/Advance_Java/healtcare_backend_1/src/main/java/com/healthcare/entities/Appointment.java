@@ -3,6 +3,7 @@ package com.healthcare.entities;
 import java.time.LocalDateTime;
 
 import jakarta.persistence.AttributeOverride;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -11,6 +12,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.UniqueConstraint;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -28,6 +30,7 @@ import lombok.ToString;
 @AttributeOverride(name = "id", column = @Column(name = "appointment_id"))
 //lombok annotations
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 @ToString(callSuper = true,exclude = {"myDoctor","myPatient"})
@@ -38,12 +41,12 @@ public class Appointment extends BaseEntity {
 	@Enumerated(EnumType.STRING)
 	private Status status = Status.SCHEDULED;
 	// Appointment *------>1 Doctor - many to one association between entities
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	// FK col name , not null
 	@JoinColumn(name = "doctor_id", nullable = false)
 	private Doctor myDoctor;
 	// Appointment * ------> 1 Patient - many to one association between entities
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	// FK col name , not null
 	@JoinColumn(name = "patient_id", nullable = false)
 	private Patient myPatient;
