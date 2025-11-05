@@ -26,54 +26,52 @@ public class RestaurantServiceImpl implements RestaurantService {
 
 	@Override
 	public String addRestaurant(Restaurant newRestaurant) {
-		//check if restaurant already available exist
+		// check if restaurant already available exist
 		String mesg = "Restaurant Already exists! choose some other name";
-		if(restaurantDao.existsByName(newRestaurant.getName())) {
-			 throw new ResourceAlreadyExistException("Error");
-			
-		}
-		else {
-			//set stataus to true
-			
+		if (restaurantDao.existsByName(newRestaurant.getName())) {
+			throw new ResourceAlreadyExistException("Error");
+
+		} else {
+			// set stataus to true
+
 			newRestaurant.setStatus(true);
-			//save the details
+			// save the details
 			Restaurant persistantRestaurant = restaurantDao.save(newRestaurant);
-		
-			return "added new Reataurent with id = "+persistantRestaurant.getId();
+
+			return "added new Reataurent with id = " + persistantRestaurant.getId();
 		}
-		
-		
-		
+
 	}
 
 	@Override
 	public String deleteRestaurant(Long restaurantId) {
-		Restaurant restaurantNew = restaurantDao.findById(restaurantId).orElseThrow(()->new ResourceNotFound("Restaurant not found with given id"));
+		Restaurant restaurantNew = restaurantDao.findById(restaurantId)
+				.orElseThrow(() -> new ResourceNotFound("Restaurant not found with given id"));
 		restaurantNew.setStatus(false);
 		return "soft deleted";
-		
+
 	}
 
 	@Override
 	public Restaurant getDetailsById(Long restaurantId) {
-		Restaurant restaurant= restaurantDao.findById(restaurantId).orElseThrow(()->new ResourceNotFound("NO restaurant found with given ID"));
+		Restaurant restaurant = restaurantDao.findById(restaurantId)
+				.orElseThrow(() -> new ResourceNotFound("NO restaurant found with given ID"));
 		return restaurant;
 	}
 
 	@Override
 	public Restaurant updateDetails(Long restaurantId, Restaurant updatedRestaurant) {
 
-	    Restaurant existing = restaurantDao.findById(restaurantId)
-	            .orElseThrow(() -> new ResourceNotFound("Restaurant Not Found"));
+		Restaurant existing = restaurantDao.findById(restaurantId)
+				.orElseThrow(() -> new ResourceNotFound("Restaurant Not Found"));
 
-	    // Update fields
-	    existing.setName(updatedRestaurant.getName());
-	    existing.setAddress(updatedRestaurant.getAddress());
-	    existing.setCity(updatedRestaurant.getCity());
-	    existing.setDescription(updatedRestaurant.getDescription());
+		
+		existing.setName(updatedRestaurant.getName());
+		existing.setAddress(updatedRestaurant.getAddress());
+		existing.setCity(updatedRestaurant.getCity());
+		existing.setDescription(updatedRestaurant.getDescription());
 
-	    return restaurantDao.save(existing);
+		return restaurantDao.save(existing);
 	}
-
 
 }

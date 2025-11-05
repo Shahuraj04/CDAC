@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.ems.dao.EmployeeDao;
 import com.ems.entities.Employee;
 import com.ems.entities.EmploymentType;
 import com.ems.service.EmployeeService;
