@@ -1,7 +1,9 @@
 package com.institute.entities;
 
 import java.time.LocalDate;
+import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -9,15 +11,17 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
-import jakarta.persistence.UniqueConstraint;
-import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 
 @NoArgsConstructor
-
+@Getter
+@Setter
 @Table(name = "courses")
 public class Course {
 	
@@ -55,5 +59,8 @@ public class Course {
 	private double fees;
 	@Column(name = "marks_required")
 	private int requiredMarks;
+	@OneToMany(mappedBy = "course", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+	private List<Student> students;
+
 
 }
