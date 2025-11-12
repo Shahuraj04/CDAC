@@ -1,4 +1,4 @@
-package com.exam;
+package com.vehicle;
 
 import org.modelmapper.Conditions;
 import org.modelmapper.ModelMapper;

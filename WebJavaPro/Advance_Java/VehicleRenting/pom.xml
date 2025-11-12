@@ -10,7 +10,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.cdac</groupId>
-	<artifactId>springboot_backend_template</artifactId>
+	<artifactId>Vehicle_renting</artifactId>
 	<version>0.0.1</version>
 	<name>springboot_backend_template</name>
 	<description>Spring Boot Backend Template for Adv Java Lab Exam</description>
