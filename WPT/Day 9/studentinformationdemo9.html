@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clshidden{display:none
+               }
+        .clsshow{display:block
+        }
+    </style>
+    <script src="../bootstrapdemos/jquery.js"></script>
+    <script>
+        const validatetextbox= (id , errid) => {
+            var val = $("#"+id).val()
+            if(val != "" && val.trim().length > 0){
+                $("#"+errid).html(""); 
+                return true;
+            } 
+            $("#"+errid).html("Please enter the data");
+            return false;
+        }
+
+        const showdata = ()=> {
+            var str =""
+            str += "Name: " + $("#nm").val() + "<br/>"
+            str += "Address: "+ $("#addr").val() +"<br/>"
+            str += "Degree: "+ $("input[name=course]:checked").val() +"<br/>"
+            var str1 = ""
+            $("input[name=subject]").each(function(index , element){
+                str1 += $(element).val() + ","
+            })
+            str1 = str1.slice(0, str1.length-1)
+            str += "Subject: " + str1
+            $("#mydiv3").html(str)
+        }
+
+        $(document).ready(function(){
+
+            $("#show").click(function(){
+                if($("#show").is(":checked")) {
+                    var flag1 = validatetextbox("nm", "errnm");
+                    var flag2 = validatetextbox("addr", "erraddr");
+                    if(flag1 && flag2){
+                        $("#mydiv2").addClass("clsshow")
+                        .removeClass("clshidden") 
+                    }
+            }
+        
+        })//end of click
+        var cnt = 1;
+        $("#addtxt").on("click", function(){
+            var v = $("#subject").clone()
+            $(v).val("")
+            $(v).attr("id","subject" + cnt)
+            cnt++;
+            $("#mydiv2").append(v).append("<br/>")
+        })
+
+        $("#showinfo").click(function(){
+            $("#addtxt").off("click")
+            showdata()
+        })
+
+
+        
+        })
+
+
+    </script>
+</head>
+<body>
+    <div id="mydiv1">
+        <label for="nm">Name</label>
+        <input type="text" name="nm" id="nm">
+        <span id="errnm"></span><br>
+
+        <label for="addr">Address</label>
+        <input type="text" name="addr" id="addr">
+        <span id="erraddr"></span><br>
+
+        <input type="checkbox" name="show" id="show" value="show"><label for="show">Show details</label>
+    </div>
+    <div id="mydiv2" class="clshidden">
+         <input type="radio" name="course" id="ME" value="ME"><label for="ME">ME</label>
+
+         <input type="radio" name="course" id="MTech" value="MTech"><label for="MTech">MTech</label>  
+
+         <input type="radio" name="course" id="PHD" value="PHD"><label for="PHD">PHD</label> <br>
+         <label>Subject : </label>
+        <input type="text" name="subject" id="subject">
+        <button type="button" name="addtxt" id="addtxt" value="addtxt">Add New</button>
+        <button type="button" name="showinfo" id="showinfo" value="showinfo">Show info</button>
+        <br>
+
+    </div>
+    <div id="mydiv3">
+
+    </div>
+</body>
+</html>

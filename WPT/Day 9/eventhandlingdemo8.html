@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myclass{
+            border:2px solid red;
+        }
+    </style>
+    <script src="../bootstrapdemos/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            //click event is assigned to the button and will get executed only once
+            $('#one').one("click",function(){
+                alert("this is alert appears only once")
+            })
+            var cnt=1;
+            $('#btnadd').on("click",function(){
+                  
+                  var v=$('#nm').clone();
+                  $(v).val("")
+                  //assign properties to the new element
+                  //$(v).attr("id","nm"+cnt);
+                  $(v).attr({"id":"nm"+cnt,
+                              "class":"myclass"
+                  });
+                  cnt++;
+                  $('body').append(v);
+                  $('body').append("<br/>");
+                  $(v).focus();
+            })
+            
+            $('#btnstopadd').click(function(){
+                $('#btnadd').off("click");
+            })
+            //it will keep the focus event with body tag, and assign the event to all children which satisfies the given selector input[id^=nm]
+            $('body').delegate('input[id^=nm]',"focus",function(){
+                $(this).css("background-color","yellow");
+            })
+
+            $('body').delegate('input[id^=nm]','blur',function(){
+                $(this).css("background-color","white");
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <button type="button" name="one" id="one">Works only once</button>
+    <button type="button" name="btnadd" id="btnadd">add text box</button>
+    <button type="button" name="btnstopadd" id="btnstopadd">stop add text box</button><br>
+    Name: <input type="text" name="nm" id="nm"><br>
+
+</body>
+</html>

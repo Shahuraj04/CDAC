@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: aqua;
+            border:2px solid red;
+            border-radius: 20px;
+        }
+    </style>
+    <script src="../bootstrapdemos/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#animate').click(function(){
+                $('#mydiv').animate({"width":"200px",height:"200px"},2000,function(){
+            console.log("animation done")    
+            })
+            })
+            
+        })
+    </script>
+</head>
+<body>
+    <button type="button" name="animate" id="animate">Animate</button>
+    <div id="mydiv">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam ab iste dolorum vero beatae ad doloribus maxime laudantium repellat magnam provident deserunt porro itaque, neque ipsam. Doloribus iusto nobis minus!
+
+    </div>
+</body>
+</html>

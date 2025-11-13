@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+        div{
+            border:2px solid red;
+            border-radius: 20px;
+            background-color: aqua;
+            width:300px;
+            
+        }
+    </style>
+    <script src="../bootstrapdemos/jquery.js"></script>
+    <script>
+        $(document).ready(()=>{
+             $("#slideup").click(function(){
+                $('#mydiv1').slideUp(2000,function(){console.log("slideup done")})
+                $('#mydiv2').slideDown(2000,function(){console.log("slidedown done")})
+             })
+             $("#slidedown").click(function(){
+                 $('#mydiv1').slideDown(2000,function(){console.log("slidedown done")})
+                $('#mydiv2').slideUp(2000,function(){console.log("slideup done")})
+             })
+               $("#slidetoggle").click(function(){
+                $('#mydiv1').slideToggle(2000,function(){console.log("slidetoggle done")})
+                $('#mydiv2').slideToggle(2000,function(){console.log("slidetoggle done")})
+
+               })
+        })
+    </script>
+</head>
+<body>
+    <button type="button" name="slideup" id="slideup">slideup</button>
+    <button type="button" name="slidedown" id="slidedown">slidedown</button>
+    <button type="button" name="slidetoggle" id="slidetoggle">slidetoggle</button>
+    <div id="mydiv1">
+        <img src="../images/flowers.png" height="200px" width="200px">
+    </div>
+    <div id="mydiv2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto expedita nam nulla necessitatibus unde eveniet. Ex quam exercitationem fuga ab esse consequuntur totam dolore, ea voluptatum libero possimus similique deleniti.
+    </div>
+</body>
+</html>

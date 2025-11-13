@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myclass{
+            background-color: aqua;
+            border: 2px solid red;
+            color:blue;
+            border-radius:20px
+        }
+        .myc{
+            background-color: yellow;
+            border: 2px solid red;
+            color:palevioletred;
+            border-radius:20px
+        }
+        .clshidden{
+            display:none
+        }
+        .clsshow{
+            display:block
+        }
+    </style>
+    <script src="../bootstrapdemos/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            //first function is for mouseover, second function is for mouse out
+          $('#mydiv1').hover(function(){
+                console.log("in hover with mouse over function")
+                $(this).addClass("myclass").removeClass("myc")
+                $('#mydiv2').addClass("clsshow").removeClass("clshidden")
+            },function(){
+                 console.log("in hover with mouse out function")
+                 $(this).addClass("myc").removeClass("myclass")
+                $('#mydiv2').addClass("clshidden").removeClass("clsshow")
+            })
+        /*$('#mydiv1').hover(function(){
+            console.log("in hover with one function")
+            $(this).toggleClass("myclass").toggleClass("myc")
+            $('#mydiv2').toggleClass("clsshow").toggleClass("clshidden")
+        });*/
+
+        })
+    </script>
+</head>
+<body>
+    <div id="mydiv1" class="myc">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quae saepe exercitationem, autem quibusdam omnis rem dolorum harum voluptates eos numquam excepturi, consequatur cumque sapiente possimus suscipit ullam beatae. Quo.
+    </div>
+    <div id="mydiv2" class="clshidden">
+        <p>This p which is hidden</p>
+    </div>
+</body>
+</html>
