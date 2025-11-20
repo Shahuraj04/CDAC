@@ -17,7 +17,7 @@ export default function ProductTable() {
     //ProductService.getAllProducts().then((result)=>{setparr(result.data)}).catch((err)=>{
     //console.log(err)})
     var result=await ProductService.getAllProducts();
-    console.log(result.data)
+    console.log(result.data.data)
     setparr(result.data.data)
   }
 

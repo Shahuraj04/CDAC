@@ -2,12 +2,14 @@ const express = require('express')
 const app = express()
 const bodyParser=require('body-parser')
 const loginrouter  = require("./router/loginrouter")
+const emprouter= require("./router/emprouter")
 
 
 
 app.use(bodyParser.json())
 
 app.use("/login",loginrouter)
+app.use("/",emprouter)
 
 app.listen(7777,()=>{
 

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import {Routes,Route,Navigate} from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import "bootstrap/dist/css/bootstrap.css"
@@ -16,33 +16,33 @@ import ProductEdit from './pages/ProductEdit'
 function App() {
   return (
     <div>
-      <MyHeader/>
-      <MainNavBar/>
+      <MyHeader />
+      <MainNavBar />
       <Routes>
         <Route path="/" element={<Navigate replace to="/home"></Navigate>}></Route>
 
-        <Route path="/home" element={<HomeComponent/>}>
+        <Route path="/home" element={<HomeComponent />}>
         </Route>
 
-        <Route path="/table" element={<ProductTable/>}>
-        <Route path="details/:id" element={<ProductDetails/>}></Route>
+        <Route path="/table" element={<ProductTable />}>
+          <Route path="details/:id" element={<ProductDetails />}></Route>
         </Route>
 
-    
-         <Route path="/edit/:id" element={<ProductEdit/>}>
+
+        <Route path="/edit/:id" element={<ProductEdit />}>
         </Route>
-        <Route path="/list" element={<ProductList/>}>
+        <Route path="/list" element={<ProductList />}>
         </Route>
 
-        <Route path="/form" element={<ProductForm/>}>
+        <Route path="/form" element={<ProductForm />}>
         </Route>
 
-        <Route path="/aboutus" element={<AboutUsComponent/>}>
+        <Route path="/aboutus" element={<AboutUsComponent />}>
         </Route>
 
 
       </Routes>
-      <MyFooter/>
+      <MyFooter />
     </div>
   )
 }

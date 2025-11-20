@@ -13,25 +13,24 @@ exports.validateuser = (req, resp) => {
         [email],
         (err, result) => {
 
-            // 🔥 If MySQL gives any error, show it in console
             if (err) {
                 console.log("MYSQL ERROR → ", err);
                 return resp.status(500).json({ message: "DB error" });
             }
 
-            // ❗ If no user found
+           
             if (result.length === 0) {
                 return resp.status(404).json({ message: "User not found" });
             }
 
             const user = result[0];
 
-            // ❗ Password match check (plain text)
+           
             if (user.password !== password) {
                 return resp.status(401).json({ message: "Invalid password" });
             }
 
-            // 🔥 Generate JWT token
+          
             const token = generateToken(user);
 
             return resp.status(200).json({

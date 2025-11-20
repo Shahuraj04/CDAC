@@ -1,0 +1,9 @@
+.myTitle {
+    background: #e3ffe9;
+    color: #0f5132;
+    padding: 20px 30px;
+    font-size: 22px;
+    font-weight: 500;
+    border-left: 6px solid #198754;
+    border-radius: 6px;
+}
