@@ -3,14 +3,15 @@ const router = express.Router()
 const empcontroller = require("../controller/empcontroller")
 const {authenticateToken} = require("../middleware/jwtInfo") 
 
-router.get("/employee",authenticateToken,empcontroller.getAllEmployees)
+{/*authenticateToken*/}
+router.get("/employee",empcontroller.getAllEmployees)
 
-router.get("/employee/:id",authenticateToken,empcontroller.getEmpbyId)
+router.get("/employee/:id",empcontroller.getEmpbyId)
 
-router.post("/employee/addemp",authenticateToken,empcontroller.addEmployee)
+router.post("/employee/addemp",empcontroller.addEmployee)
 
-router.put("/employee/:id",authenticateToken,empcontroller.updateEmp)
+router.put("/employee/:id",empcontroller.updateEmp)
 
-router.delete("/employee/:id",authenticateToken,empcontroller.deleteByid)
+router.delete("/employee/:id",empcontroller.deleteByid)
 
 module.exports=router;

@@ -5,6 +5,9 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import "bootstrap/dist/css/bootstrap.css"
 import TitleBar from './components/TitleBar'
 import NavBar from './components/NavBar'
+import EmployeeTable from './Pages/EmployeeTable'
+import LandingPage from './Pages/LandingPage'
+import EmpForm from './Pages/EmpForm'
 import './App.css'
 
 function App() {
@@ -12,22 +15,20 @@ function App() {
 
   return (
     <>
-      
-
       <div>
-        <TitleBar/>
-        <NavBar/>
+        <TitleBar />
+        <NavBar />
         <Routes>
-          <Route>
-            
-          </Route>
+          <Route path="/" element={<Navigate replace to="/home"></Navigate>}></Route>
+          
+          <Route path="/home" element={<LandingPage />}></Route>
+
+          <Route path="/emptable" element={<EmployeeTable/>}></Route>
+
+          <Route path='/form' element={<EmpForm/>}></Route>
 
 
         </Routes>
-        
-
-
-
       </div>
     </>
   )

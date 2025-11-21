@@ -4,7 +4,9 @@ const bodyParser=require('body-parser')
 const loginrouter  = require("./router/loginrouter")
 const emprouter= require("./router/emprouter")
 
+const cors = require('cors')
 
+app.use(cors())
 
 app.use(bodyParser.json())
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 export default function NavBar() {
   return (
@@ -6,10 +7,10 @@ export default function NavBar() {
         
       <ul className="nav justify-content-center">
         <li className="nav-item">
-          <a className="nav-link active" href="#">Employee Data</a>
+          <NavLink className="nav-link" to="/emptable">Employee</NavLink>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">Employee Names</a>
+          <NavLink className="nav-link" to="/emptable">Employee Names</NavLink>
         </li>
         <li className="nav-item">
           <a className="nav-link" href="#">Performance</a>
