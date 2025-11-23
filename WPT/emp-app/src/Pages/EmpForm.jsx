@@ -72,4 +72,4 @@ export default function EmployeeAddForm() {
             </form>
         </div>
     );
-}
+  }
