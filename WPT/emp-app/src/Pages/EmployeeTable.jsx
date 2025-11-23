@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import EmpService from "../service/EmpService"
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 export default function EmployeeTable() {
-
+    const navigate = useNavigate();
     const [earr, setearr] = useState([]);
 
     useEffect(() => {
@@ -17,10 +17,16 @@ export default function EmployeeTable() {
         setearr(result.data.data)
     }
 
+    const deleteEmployee = async (id) => {
+        
+        await EmpService.deleteEmp(id);
+        fetchdata(); // refresh table
+    }
+
     return (
         <div>
             <Link to="/form">
-                <button type="button" className="btn btn-primary" name="add" id="add">Add new Product</button>
+                <button type="button" className="btn btn-primary" name="add" id="add">Add new Employee</button>
             </Link>
             <br /><br />
             <table className="table table-striped">
@@ -42,6 +48,13 @@ export default function EmployeeTable() {
                         <td>{emp.email}</td>
                         <td>{emp.password}</td>
                         <td>{emp.role}</td>
+                        <td>
+                            <Link to={`/edit/${emp.empId}`} state={{ empData: emp }}>
+                                <button type='button' name='edit' className='btn btn-info'>Edit</button>&nbsp;&nbsp;
+                            </Link>
+                            
+                                <button type='button' name='delete' className='btn btn-danger' onClick={()=>deleteEmployee(emp.empId)}>Delete</button>
+                        </td>
 
                     </tr>)
                     }

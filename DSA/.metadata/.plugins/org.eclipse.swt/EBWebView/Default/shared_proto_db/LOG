@@ -1,2 +1,3 @@
-2025/11/22-11:55:19.787 194c Creating DB D:\CDAC\DSA\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\shared_proto_db since it was missing.
-2025/11/22-11:55:19.796 194c Reusing MANIFEST D:\CDAC\DSA\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\shared_proto_db/MANIFEST-000001
+2025/11/22-12:42:33.482 295c Reusing MANIFEST D:\CDAC\DSA\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\shared_proto_db/MANIFEST-000001
+2025/11/22-12:42:33.483 295c Recovering log #3
+2025/11/22-12:42:33.484 295c Reusing old log D:\CDAC\DSA\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\shared_proto_db/000003.log 

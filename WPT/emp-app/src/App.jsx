@@ -9,6 +9,7 @@ import EmployeeTable from './Pages/EmployeeTable'
 import LandingPage from './Pages/LandingPage'
 import EmpForm from './Pages/EmpForm'
 import './App.css'
+import EditForm from './Pages/EditForm'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -26,6 +27,8 @@ function App() {
           <Route path="/emptable" element={<EmployeeTable/>}></Route>
 
           <Route path='/form' element={<EmpForm/>}></Route>
+
+          <Route path="/edit/:id" element={<EditForm />} />
 
 
         </Routes>
