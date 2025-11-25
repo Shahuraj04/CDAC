@@ -12,7 +12,7 @@ function App() {
     <>
     <Routes>
       <Route path="/login" element={<LoginPage/>}></Route>
-      <Route path="emptable" element={<EmpTable/>}></Route>
+      {/* <Route path="/emptable" element={<EmpTable/>}></Route> */}
 
     </Routes>
       
