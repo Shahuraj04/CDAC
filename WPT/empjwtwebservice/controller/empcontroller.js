@@ -41,7 +41,7 @@ exports.addEmployee = (req, resp) => {
                 console.log(err);
                 resp.status(500).json({ message: "error " + err });
             } else {
-                resp.json({ message: "Employee added", data: result });
+                    resp.json({ message: "Employee added", data: result });
             }
 
         }
