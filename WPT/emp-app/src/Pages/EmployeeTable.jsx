@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react'
 import EmpService from "../service/EmpService"
 import { Link, useNavigate } from 'react-router-dom';
 
