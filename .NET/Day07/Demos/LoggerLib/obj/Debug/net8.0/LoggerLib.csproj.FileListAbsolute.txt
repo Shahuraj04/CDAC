@@ -1,0 +1,12 @@
+D:\CDAC\.NET\Day07\Demos\LoggerLib\bin\Debug\net8.0\LoggerLib.deps.json
+D:\CDAC\.NET\Day07\Demos\LoggerLib\bin\Debug\net8.0\LoggerLib.dll
+D:\CDAC\.NET\Day07\Demos\LoggerLib\bin\Debug\net8.0\LoggerLib.pdb
+D:\CDAC\.NET\Day07\Demos\LoggerLib\obj\Debug\net8.0\LoggerLib.GeneratedMSBuildEditorConfig.editorconfig
+D:\CDAC\.NET\Day07\Demos\LoggerLib\obj\Debug\net8.0\LoggerLib.AssemblyInfoInputs.cache
+D:\CDAC\.NET\Day07\Demos\LoggerLib\obj\Debug\net8.0\LoggerLib.AssemblyInfo.cs
+D:\CDAC\.NET\Day07\Demos\LoggerLib\obj\Debug\net8.0\LoggerLib.csproj.CoreCompileInputs.cache
+D:\CDAC\.NET\Day07\Demos\LoggerLib\obj\Debug\net8.0\LoggerLib.sourcelink.json
+D:\CDAC\.NET\Day07\Demos\LoggerLib\obj\Debug\net8.0\LoggerLib.dll
+D:\CDAC\.NET\Day07\Demos\LoggerLib\obj\Debug\net8.0\refint\LoggerLib.dll
+D:\CDAC\.NET\Day07\Demos\LoggerLib\obj\Debug\net8.0\LoggerLib.pdb
+D:\CDAC\.NET\Day07\Demos\LoggerLib\obj\Debug\net8.0\ref\LoggerLib.dll

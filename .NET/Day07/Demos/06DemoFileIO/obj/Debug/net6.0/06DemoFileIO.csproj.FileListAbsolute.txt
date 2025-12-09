@@ -1,0 +1,15 @@
+D:\CDAC\.NET\Day07\Demos\06DemoFileIO\bin\Debug\net6.0\06DemoFileIO.exe
+D:\CDAC\.NET\Day07\Demos\06DemoFileIO\bin\Debug\net6.0\06DemoFileIO.deps.json
+D:\CDAC\.NET\Day07\Demos\06DemoFileIO\bin\Debug\net6.0\06DemoFileIO.runtimeconfig.json
+D:\CDAC\.NET\Day07\Demos\06DemoFileIO\bin\Debug\net6.0\06DemoFileIO.dll
+D:\CDAC\.NET\Day07\Demos\06DemoFileIO\bin\Debug\net6.0\06DemoFileIO.pdb
+D:\CDAC\.NET\Day07\Demos\06DemoFileIO\obj\Debug\net6.0\06DemoFileIO.GeneratedMSBuildEditorConfig.editorconfig
+D:\CDAC\.NET\Day07\Demos\06DemoFileIO\obj\Debug\net6.0\06DemoFileIO.AssemblyInfoInputs.cache
+D:\CDAC\.NET\Day07\Demos\06DemoFileIO\obj\Debug\net6.0\06DemoFileIO.AssemblyInfo.cs
+D:\CDAC\.NET\Day07\Demos\06DemoFileIO\obj\Debug\net6.0\06DemoFileIO.csproj.CoreCompileInputs.cache
+D:\CDAC\.NET\Day07\Demos\06DemoFileIO\obj\Debug\net6.0\06DemoFileIO.sourcelink.json
+D:\CDAC\.NET\Day07\Demos\06DemoFileIO\obj\Debug\net6.0\06DemoFileIO.dll
+D:\CDAC\.NET\Day07\Demos\06DemoFileIO\obj\Debug\net6.0\refint\06DemoFileIO.dll
+D:\CDAC\.NET\Day07\Demos\06DemoFileIO\obj\Debug\net6.0\06DemoFileIO.pdb
+D:\CDAC\.NET\Day07\Demos\06DemoFileIO\obj\Debug\net6.0\06DemoFileIO.genruntimeconfig.cache
+D:\CDAC\.NET\Day07\Demos\06DemoFileIO\obj\Debug\net6.0\ref\06DemoFileIO.dll

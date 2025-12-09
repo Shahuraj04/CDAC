@@ -1,0 +1,15 @@
+D:\CDAC\.NET\Demos (1)\03DemoOOP\bin\Debug\net8.0\03DemoOOP.exe
+D:\CDAC\.NET\Demos (1)\03DemoOOP\bin\Debug\net8.0\03DemoOOP.deps.json
+D:\CDAC\.NET\Demos (1)\03DemoOOP\bin\Debug\net8.0\03DemoOOP.runtimeconfig.json
+D:\CDAC\.NET\Demos (1)\03DemoOOP\bin\Debug\net8.0\03DemoOOP.dll
+D:\CDAC\.NET\Demos (1)\03DemoOOP\bin\Debug\net8.0\03DemoOOP.pdb
+D:\CDAC\.NET\Demos (1)\03DemoOOP\obj\Debug\net8.0\03DemoOOP.GeneratedMSBuildEditorConfig.editorconfig
+D:\CDAC\.NET\Demos (1)\03DemoOOP\obj\Debug\net8.0\03DemoOOP.AssemblyInfoInputs.cache
+D:\CDAC\.NET\Demos (1)\03DemoOOP\obj\Debug\net8.0\03DemoOOP.AssemblyInfo.cs
+D:\CDAC\.NET\Demos (1)\03DemoOOP\obj\Debug\net8.0\03DemoOOP.csproj.CoreCompileInputs.cache
+D:\CDAC\.NET\Demos (1)\03DemoOOP\obj\Debug\net8.0\03DemoOOP.sourcelink.json
+D:\CDAC\.NET\Demos (1)\03DemoOOP\obj\Debug\net8.0\03DemoOOP.dll
+D:\CDAC\.NET\Demos (1)\03DemoOOP\obj\Debug\net8.0\refint\03DemoOOP.dll
+D:\CDAC\.NET\Demos (1)\03DemoOOP\obj\Debug\net8.0\03DemoOOP.pdb
+D:\CDAC\.NET\Demos (1)\03DemoOOP\obj\Debug\net8.0\03DemoOOP.genruntimeconfig.cache
+D:\CDAC\.NET\Demos (1)\03DemoOOP\obj\Debug\net8.0\ref\03DemoOOP.dll

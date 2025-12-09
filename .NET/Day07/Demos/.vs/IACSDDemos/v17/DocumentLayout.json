@@ -1,0 +1,190 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\CDAC\\.NET\\Day07\\Demos\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shahu\\AppData\\Local\\Temp\\sgwdgjxj..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shahu\\AppData\\Local\\Temp\\4knib3at..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shahu\\AppData\\Local\\Temp\\w4sfo0xi..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C5206A9-F387-4CC3-9E3E-AB50AD0CD866}|12DemoDB\\12DemoDB.csproj|d:\\cdac\\.net\\day07\\demos\\12demodb\\dal\\empdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C5206A9-F387-4CC3-9E3E-AB50AD0CD866}|12DemoDB\\12DemoDB.csproj|solutionrelative:12demodb\\dal\\empdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C5206A9-F387-4CC3-9E3E-AB50AD0CD866}|12DemoDB\\12DemoDB.csproj|d:\\cdac\\.net\\day07\\demos\\12demodb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C5206A9-F387-4CC3-9E3E-AB50AD0CD866}|12DemoDB\\12DemoDB.csproj|solutionrelative:12demodb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CA7E14D-2E81-4184-AF41-8920ACE59617}|10DemoFeatures\\10DemoFeatures.csproj|d:\\cdac\\.net\\day07\\demos\\10demofeatures\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CA7E14D-2E81-4184-AF41-8920ACE59617}|10DemoFeatures\\10DemoFeatures.csproj|solutionrelative:10demofeatures\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CA7E14D-2E81-4184-AF41-8920ACE59617}|10DemoFeatures\\10DemoFeatures.csproj|d:\\cdac\\.net\\day07\\demos\\10demofeatures\\student_bydeveloper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CA7E14D-2E81-4184-AF41-8920ACE59617}|10DemoFeatures\\10DemoFeatures.csproj|solutionrelative:10demofeatures\\student_bydeveloper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CA7E14D-2E81-4184-AF41-8920ACE59617}|10DemoFeatures\\10DemoFeatures.csproj|d:\\cdac\\.net\\day07\\demos\\10demofeatures\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CA7E14D-2E81-4184-AF41-8920ACE59617}|10DemoFeatures\\10DemoFeatures.csproj|solutionrelative:10demofeatures\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CA7E14D-2E81-4184-AF41-8920ACE59617}|10DemoFeatures\\10DemoFeatures.csproj|d:\\cdac\\.net\\day07\\demos\\10demofeatures\\file1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CA7E14D-2E81-4184-AF41-8920ACE59617}|10DemoFeatures\\10DemoFeatures.csproj|solutionrelative:10demofeatures\\file1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CA7E14D-2E81-4184-AF41-8920ACE59617}|10DemoFeatures\\10DemoFeatures.csproj|d:\\cdac\\.net\\day07\\demos\\10demofeatures\\file2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CA7E14D-2E81-4184-AF41-8920ACE59617}|10DemoFeatures\\10DemoFeatures.csproj|solutionrelative:10demofeatures\\file2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CA7E14D-2E81-4184-AF41-8920ACE59617}|10DemoFeatures\\10DemoFeatures.csproj|d:\\cdac\\.net\\day07\\demos\\10demofeatures\\10demofeatures.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{4CA7E14D-2E81-4184-AF41-8920ACE59617}|10DemoFeatures\\10DemoFeatures.csproj|solutionrelative:10demofeatures\\10demofeatures.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shahu\\AppData\\Local\\Temp\\sgwdgjxj..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "sgwdgjxj..sql ",
+              "DocumentMoniker": "C:\\Users\\Shahu\\AppData\\Local\\Temp\\sgwdgjxj..sql",
+              "ToolTip": "sgwdgjxj..sql ",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-12-09T08:49:28.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "4knib3at..sql",
+              "DocumentMoniker": "C:\\Users\\Shahu\\AppData\\Local\\Temp\\4knib3at..sql",
+              "ToolTip": "C:\\Users\\Shahu\\AppData\\Local\\Temp\\4knib3at..sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-12-08T13:02:38.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "w4sfo0xi..sql",
+              "DocumentMoniker": "C:\\Users\\Shahu\\AppData\\Local\\Temp\\w4sfo0xi..sql",
+              "ToolTip": "C:\\Users\\Shahu\\AppData\\Local\\Temp\\w4sfo0xi..sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-12-08T12:51:18.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmpDAL.cs",
+              "DocumentMoniker": "D:\\CDAC\\.NET\\Day07\\Demos\\12DemoDB\\DAL\\EmpDAL.cs",
+              "RelativeDocumentMoniker": "12DemoDB\\DAL\\EmpDAL.cs",
+              "ToolTip": "D:\\CDAC\\.NET\\Day07\\Demos\\12DemoDB\\DAL\\EmpDAL.cs",
+              "RelativeToolTip": "12DemoDB\\DAL\\EmpDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T12:47:07.887Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\CDAC\\.NET\\Day07\\Demos\\12DemoDB\\Program.cs",
+              "RelativeDocumentMoniker": "12DemoDB\\Program.cs",
+              "ToolTip": "D:\\CDAC\\.NET\\Day07\\Demos\\12DemoDB\\Program.cs",
+              "RelativeToolTip": "12DemoDB\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T12:45:25.555Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Student_ByDeveloper.cs",
+              "DocumentMoniker": "D:\\CDAC\\.NET\\Day07\\Demos\\10DemoFeatures\\Student_ByDeveloper.cs",
+              "RelativeDocumentMoniker": "10DemoFeatures\\Student_ByDeveloper.cs",
+              "ToolTip": "D:\\CDAC\\.NET\\Day07\\Demos\\10DemoFeatures\\Student_ByDeveloper.cs",
+              "RelativeToolTip": "10DemoFeatures\\Student_ByDeveloper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T12:45:12.496Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Student.cs",
+              "DocumentMoniker": "D:\\CDAC\\.NET\\Day07\\Demos\\10DemoFeatures\\Student.cs",
+              "RelativeDocumentMoniker": "10DemoFeatures\\Student.cs",
+              "ToolTip": "D:\\CDAC\\.NET\\Day07\\Demos\\10DemoFeatures\\Student.cs",
+              "RelativeToolTip": "10DemoFeatures\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T12:45:09.251Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\CDAC\\.NET\\Day07\\Demos\\10DemoFeatures\\Program.cs",
+              "RelativeDocumentMoniker": "10DemoFeatures\\Program.cs",
+              "ToolTip": "D:\\CDAC\\.NET\\Day07\\Demos\\10DemoFeatures\\Program.cs",
+              "RelativeToolTip": "10DemoFeatures\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T12:44:56.201Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "File1.cs",
+              "DocumentMoniker": "D:\\CDAC\\.NET\\Day07\\Demos\\10DemoFeatures\\File1.cs",
+              "RelativeDocumentMoniker": "10DemoFeatures\\File1.cs",
+              "ToolTip": "D:\\CDAC\\.NET\\Day07\\Demos\\10DemoFeatures\\File1.cs",
+              "RelativeToolTip": "10DemoFeatures\\File1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T12:44:53.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "File2.cs",
+              "DocumentMoniker": "D:\\CDAC\\.NET\\Day07\\Demos\\10DemoFeatures\\File2.cs",
+              "RelativeDocumentMoniker": "10DemoFeatures\\File2.cs",
+              "ToolTip": "D:\\CDAC\\.NET\\Day07\\Demos\\10DemoFeatures\\File2.cs",
+              "RelativeToolTip": "10DemoFeatures\\File2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T12:44:49.333Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "10DemoFeatures.csproj",
+              "DocumentMoniker": "D:\\CDAC\\.NET\\Day07\\Demos\\10DemoFeatures\\10DemoFeatures.csproj",
+              "RelativeDocumentMoniker": "10DemoFeatures\\10DemoFeatures.csproj",
+              "ToolTip": "D:\\CDAC\\.NET\\Day07\\Demos\\10DemoFeatures\\10DemoFeatures.csproj",
+              "RelativeToolTip": "10DemoFeatures\\10DemoFeatures.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-08T12:44:44.375Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

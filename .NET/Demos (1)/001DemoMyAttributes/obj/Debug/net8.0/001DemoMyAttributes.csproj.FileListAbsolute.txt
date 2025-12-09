@@ -1,0 +1,12 @@
+D:\CDAC\.NET\Demos (1)\001DemoMyAttributes\bin\Debug\net8.0\001DemoMyAttributes.deps.json
+D:\CDAC\.NET\Demos (1)\001DemoMyAttributes\bin\Debug\net8.0\001DemoMyAttributes.dll
+D:\CDAC\.NET\Demos (1)\001DemoMyAttributes\bin\Debug\net8.0\001DemoMyAttributes.pdb
+D:\CDAC\.NET\Demos (1)\001DemoMyAttributes\obj\Debug\net8.0\001DemoMyAttributes.GeneratedMSBuildEditorConfig.editorconfig
+D:\CDAC\.NET\Demos (1)\001DemoMyAttributes\obj\Debug\net8.0\001DemoMyAttributes.AssemblyInfoInputs.cache
+D:\CDAC\.NET\Demos (1)\001DemoMyAttributes\obj\Debug\net8.0\001DemoMyAttributes.AssemblyInfo.cs
+D:\CDAC\.NET\Demos (1)\001DemoMyAttributes\obj\Debug\net8.0\001DemoMyAttributes.csproj.CoreCompileInputs.cache
+D:\CDAC\.NET\Demos (1)\001DemoMyAttributes\obj\Debug\net8.0\001DemoMyAttributes.sourcelink.json
+D:\CDAC\.NET\Demos (1)\001DemoMyAttributes\obj\Debug\net8.0\001DemoMyAttributes.dll
+D:\CDAC\.NET\Demos (1)\001DemoMyAttributes\obj\Debug\net8.0\refint\001DemoMyAttributes.dll
+D:\CDAC\.NET\Demos (1)\001DemoMyAttributes\obj\Debug\net8.0\001DemoMyAttributes.pdb
+D:\CDAC\.NET\Demos (1)\001DemoMyAttributes\obj\Debug\net8.0\ref\001DemoMyAttributes.dll

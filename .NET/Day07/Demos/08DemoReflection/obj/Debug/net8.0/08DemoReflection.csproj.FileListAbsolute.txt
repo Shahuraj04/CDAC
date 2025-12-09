@@ -1,0 +1,15 @@
+D:\CDAC\.NET\Day07\Demos\08DemoReflection\bin\Debug\net8.0\08DemoReflection.exe
+D:\CDAC\.NET\Day07\Demos\08DemoReflection\bin\Debug\net8.0\08DemoReflection.deps.json
+D:\CDAC\.NET\Day07\Demos\08DemoReflection\bin\Debug\net8.0\08DemoReflection.runtimeconfig.json
+D:\CDAC\.NET\Day07\Demos\08DemoReflection\bin\Debug\net8.0\08DemoReflection.dll
+D:\CDAC\.NET\Day07\Demos\08DemoReflection\bin\Debug\net8.0\08DemoReflection.pdb
+D:\CDAC\.NET\Day07\Demos\08DemoReflection\obj\Debug\net8.0\08DemoReflection.GeneratedMSBuildEditorConfig.editorconfig
+D:\CDAC\.NET\Day07\Demos\08DemoReflection\obj\Debug\net8.0\08DemoReflection.AssemblyInfoInputs.cache
+D:\CDAC\.NET\Day07\Demos\08DemoReflection\obj\Debug\net8.0\08DemoReflection.AssemblyInfo.cs
+D:\CDAC\.NET\Day07\Demos\08DemoReflection\obj\Debug\net8.0\08DemoReflection.csproj.CoreCompileInputs.cache
+D:\CDAC\.NET\Day07\Demos\08DemoReflection\obj\Debug\net8.0\08DemoReflection.sourcelink.json
+D:\CDAC\.NET\Day07\Demos\08DemoReflection\obj\Debug\net8.0\08DemoReflection.dll
+D:\CDAC\.NET\Day07\Demos\08DemoReflection\obj\Debug\net8.0\refint\08DemoReflection.dll
+D:\CDAC\.NET\Day07\Demos\08DemoReflection\obj\Debug\net8.0\08DemoReflection.pdb
+D:\CDAC\.NET\Day07\Demos\08DemoReflection\obj\Debug\net8.0\08DemoReflection.genruntimeconfig.cache
+D:\CDAC\.NET\Day07\Demos\08DemoReflection\obj\Debug\net8.0\ref\08DemoReflection.dll
