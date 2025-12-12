@@ -1,0 +1,2 @@
+﻿ALTER TABLE Product
+ALTER COLUMN description VARCHAR(100);
