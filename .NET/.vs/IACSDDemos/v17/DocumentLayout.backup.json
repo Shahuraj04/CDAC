@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\CDAC\\.NET\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{964EC854-63A8-4DAF-8EE7-A0BF68E5BE17}|001DemoMVC\\001DemoMVC.csproj|d:\\cdac\\.net\\001demomvc\\filters\\myexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{964EC854-63A8-4DAF-8EE7-A0BF68E5BE17}|001DemoMVC\\001DemoMVC.csproj|solutionrelative:001demomvc\\filters\\myexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MyExceptionHandler.cs",
+              "DocumentMoniker": "D:\\CDAC\\.NET\\001DemoMVC\\Filters\\MyExceptionHandler.cs",
+              "RelativeDocumentMoniker": "001DemoMVC\\Filters\\MyExceptionHandler.cs",
+              "ToolTip": "D:\\CDAC\\.NET\\001DemoMVC\\Filters\\MyExceptionHandler.cs",
+              "RelativeToolTip": "001DemoMVC\\Filters\\MyExceptionHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T17:49:59.202Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

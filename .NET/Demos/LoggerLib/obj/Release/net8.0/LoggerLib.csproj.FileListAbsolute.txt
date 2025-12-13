@@ -1,0 +1,11 @@
+D:\IACSD\IACSDDemos\LoggerLib\bin\Release\net8.0\LoggerLib.deps.json
+D:\IACSD\IACSDDemos\LoggerLib\bin\Release\net8.0\LoggerLib.dll
+D:\IACSD\IACSDDemos\LoggerLib\bin\Release\net8.0\LoggerLib.pdb
+D:\IACSD\IACSDDemos\LoggerLib\obj\Release\net8.0\LoggerLib.GeneratedMSBuildEditorConfig.editorconfig
+D:\IACSD\IACSDDemos\LoggerLib\obj\Release\net8.0\LoggerLib.AssemblyInfoInputs.cache
+D:\IACSD\IACSDDemos\LoggerLib\obj\Release\net8.0\LoggerLib.AssemblyInfo.cs
+D:\IACSD\IACSDDemos\LoggerLib\obj\Release\net8.0\LoggerLib.csproj.CoreCompileInputs.cache
+D:\IACSD\IACSDDemos\LoggerLib\obj\Release\net8.0\LoggerLib.dll
+D:\IACSD\IACSDDemos\LoggerLib\obj\Release\net8.0\refint\LoggerLib.dll
+D:\IACSD\IACSDDemos\LoggerLib\obj\Release\net8.0\LoggerLib.pdb
+D:\IACSD\IACSDDemos\LoggerLib\obj\Release\net8.0\ref\LoggerLib.dll
