@@ -1,0 +1,27 @@
+﻿@model List<EndModulePractice.Models.Appointment>
+
+<h2>Appointment List</h2>
+<a href="/Home/Create"><button >Add new appointment</button><</a>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Patient</th>
+        <th>Doctor</th>
+        <th>Date</th>
+        <th>Fees</th>
+        <th>Status</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.AppointmentId</td>
+            <td>@item.PatientName</td>
+            <td>@item.DoctorName</td>
+            <td>@item.AppointmentDate</td>
+            <td>@item.Fees</td>
+            <td>@item.Status</td>
+        </tr>
+    }
+</table>

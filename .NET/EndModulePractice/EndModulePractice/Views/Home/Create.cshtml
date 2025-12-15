@@ -1,0 +1,22 @@
+﻿@model EndModulePractice.Models.Appointment
+
+<form asp-action="AfterCreate" method="post">
+
+    <label>Patient Name</label>
+    <input asp-for="PatientName" />
+
+    <label>Doctor Name</label>
+    <input asp-for="DoctorName" />
+
+    <label>Date</label>
+    <input asp-for="AppointmentDate" type="datetime-local" />
+
+    <label>Fees</label>
+    <input asp-for="Fees" />
+
+    <label>Status</label>
+    <input asp-for="Status" />
+
+    <button type="submit">Save</button>
+
+</form>

@@ -1,0 +1,25 @@
+Logged at: 13-12-2025 19:44:36 - Received a call for /
+Logged at: 13-12-2025 19:44:53 - Completed Execution of /
+Logged at: 13-12-2025 19:46:13 - Received a call for /
+Logged at: 13-12-2025 19:46:24 - Completed Execution of /
+Logged at: 13-12-2025 19:47:14 - Received a call for /
+Logged at: 13-12-2025 19:47:14 - Completed Execution of /
+Logged at: 13-12-2025 19:47:14 - UI is getting processed!
+Logged at: 13-12-2025 19:47:14 - UI is processed!
+Logged at: 13-12-2025 19:47:20 - Received a call for /Home/Create
+Logged at: 13-12-2025 19:47:20 - Completed Execution of /Home/Create
+Logged at: 13-12-2025 19:47:20 - UI is getting processed!
+Logged at: 13-12-2025 19:47:20 - UI is processed!
+Logged at: 13-12-2025 19:47:28 - Received a call for /Home/AfterCreate
+Logged at: 13-12-2025 19:47:28 - Completed Execution of /Home/AfterCreate
+Logged at: 13-12-2025 19:47:28 - UI is getting processed!
+Logged at: 13-12-2025 19:47:28 - UI is processed!
+Logged at: 13-12-2025 19:47:28 - Received a call for /Home/Index
+Logged at: 13-12-2025 19:47:28 - Completed Execution of /Home/Index
+Logged at: 13-12-2025 19:47:28 - UI is getting processed!
+Logged at: 13-12-2025 19:47:28 - UI is processed!
+Logged at: 13-12-2025 22:45:12 - Received a call for /
+Logged at: 13-12-2025 22:45:13 - Completed Execution of /
+Logged at: 13-12-2025 22:45:13 - UI is getting processed!
+Logged at: 13-12-2025 22:45:13 - UI is processed!
+Logged at: 14-12-2025 19:56:13 - Received a call for /
