@@ -65,7 +65,7 @@ namespace MVCDemo.Models
             string query = string.Format(queryFormat, student.Name, student.Address, student.Age, student.Email, student.No);
 
             SqlCommand command = new SqlCommand(query, sqlConnection);
-            int rowsAffected = command.ExecuteNonQuery();
+                int rowsAffected = command.ExecuteNonQuery();
             sqlConnection.Close();
             return rowsAffected;
 
