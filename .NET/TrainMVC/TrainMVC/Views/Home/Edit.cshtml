@@ -1,0 +1,93 @@
+﻿@model TrainMVC.Models.Train;
+@{
+    Layout = "~/Views/Shared/Master.cshtml";
+}
+
+<div>
+    <form method="post" action="/Home/Edit">
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <td>
+                        TrainName
+                    </td>
+                    <td>
+                        <input type="hidden" name="TrainId" value="@Model.TrainId" />
+                        <input type="text" name="TrainName" value="@Model.TrainName" />
+                    </td>
+                    <td>
+                        @Html.ValidationMessage("TrainName")
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        Source
+                    </td>
+                    <td>
+                        <input type="text" name="Source" value="@Model.Source" />
+                    </td>
+                    <td>
+                        @Html.ValidationMessage("Source")
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        Destination
+                    </td>
+                    <td>
+                        <input type="text" name="Destination" value="@Model.Destination" />
+                    </td>
+                    <td>
+                        @Html.ValidationMessage("Destination")
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        DepartureTime
+                    </td>
+                    <td>
+                        <input type="datetime-local" name="DepartureTime" value="@Model.DepartureTime" />
+                    </td>
+                    <td>
+                        @Html.ValidationMessage("DepartureTime")
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        ArrivalTime
+                    </td>
+                    <td>
+                        <input type="datetime-local" name="ArrivalTime" value="@Model.ArrivalTime" />
+                    </td>
+                    <td>
+                        @Html.ValidationMessage("ArrivalTime")
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        AvailableSeats
+                    </td>
+                    <td>
+                        <input type="number" name="AvailableSeats" value="@Model.AvailableSeats" />
+                    </td>
+                    <td>
+                        @Html.ValidationMessage("AvailableSeats")
+                    </td>
+
+            </tbody>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
+
+</div>
