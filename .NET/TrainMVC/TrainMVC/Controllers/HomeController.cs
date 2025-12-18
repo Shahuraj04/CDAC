@@ -16,10 +16,18 @@ namespace TrainMVC.Controllers
             List<Train> trains = trainModelView.GetTrains();
             return View(trains);
         }
+
+
+
+
         public IActionResult Create() { 
         
             return View();
         }
+
+
+
+
 
         [HttpPost]
         public IActionResult Create(Train train) {
@@ -40,10 +48,16 @@ namespace TrainMVC.Controllers
             
 
         }
+
+
+
         public IActionResult Edit(int Id) { 
             Train train = trainModelView.GetTrain(Id);
             return View(train);
         }
+
+
+
         [HttpPost]
         public IActionResult Edit(Train train) { 
             
