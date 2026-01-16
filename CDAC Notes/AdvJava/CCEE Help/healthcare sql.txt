@@ -1,0 +1,82 @@
+INSERT INTO users (user_id, created_on, last_updated, dob, email, first_name, last_name, password, phone, reg_amount, user_role)
+VALUES
+(1, '2025-10-01', '2025-10-10 11:00:00', '1980-06-15', 'dr.rajiv@medcare.com', 'Rajiv', 'Mehta', 'doc123', '9876543210', 0, 'ROLE_DOCTOR'),
+(2, '2025-10-01', '2025-10-10 11:00:00', '1985-03-10', 'dr.sonal@medcare.com', 'Sonal', 'Deshmukh', 'doc123', '9876501122', 0, 'ROLE_DOCTOR'),
+(3, '2025-10-02', '2025-10-10 12:00:00', '1995-12-01', 'ankit.pat@medcare.com', 'Ankit', 'Patil', 'pat123', '9822045678', 500, 'ROLE_PATIENT'),
+(4, '2025-10-02', '2025-10-10 12:00:00', '2000-08-25', 'sneha.j@medcare.com', 'Sneha', 'Joshi', 'pat123', '9811122233', 700, 'ROLE_PATIENT'),
+(5, '2025-10-03', '2025-10-10 12:00:00', '1978-02-18', 'admin@medcare.com', 'System', 'Admin', 'admin123', '9999999999', 0, 'ROLE_ADMIN');
+
+
+INSERT INTO users (user_id, created_on, last_updated, dob, email, first_name, last_name, password, phone, reg_amount, user_role)
+VALUES
+(6, '2025-10-03', '2025-10-11 10:00:00', '1975-05-20', 'dr.vikram@medcare.com', 'Vikram', 'Kulkarni', 'doc123', '9876012345', 0, 'ROLE_DOCTOR'),
+(7, '2025-10-03', '2025-10-11 10:10:00', '1982-11-12', 'dr.neha@medcare.com', 'Neha', 'Shah', 'doc123', '9876023456', 0, 'ROLE_DOCTOR'),
+(8, '2025-10-04', '2025-10-11 10:20:00', '1979-01-08', 'dr.ajay@medcare.com', 'Ajay', 'Verma', 'doc123', '9876034567', 0, 'ROLE_DOCTOR'),
+(9, '2025-10-04', '2025-10-11 10:30:00', '1988-07-19', 'dr.pooja@medcare.com', 'Pooja', 'Nair', 'doc123', '9876045678', 0, 'ROLE_DOCTOR'),
+(10,'2025-10-04', '2025-10-11 10:40:00', '1981-09-02', 'dr.rohit@medcare.com', 'Rohit', 'Bansal', 'doc123', '9876056789', 0, 'ROLE_DOCTOR');
+
+INSERT INTO users (user_id, created_on, last_updated, dob, email, first_name, last_name, password, phone, reg_amount, user_role)
+VALUES
+(11,'2025-10-05','2025-10-11 11:00:00','1992-03-15','rahul.pat@medcare.com','Rahul','More','pat123','9823012345',400,'ROLE_PATIENT'),
+(12,'2025-10-05','2025-10-11 11:05:00','1998-06-22','priya.pat@medcare.com','Priya','Kulkarni','pat123','9823023456',600,'ROLE_PATIENT'),
+(13,'2025-10-06','2025-10-11 11:10:00','1987-10-05','sachin.pat@medcare.com','Sachin','Desai','pat123','9823034567',300,'ROLE_PATIENT'),
+(14,'2025-10-06','2025-10-11 11:15:00','1990-12-30','kavita.pat@medcare.com','Kavita','Patwardhan','pat123','9823045678',800,'ROLE_PATIENT'),
+(15,'2025-10-06','2025-10-11 11:20:00','2001-04-18','omkar.pat@medcare.com','Omkar','Jadhav','pat123','9823056789',200,'ROLE_PATIENT'),
+(16,'2025-10-07','2025-10-11 11:25:00','1994-09-09','megha.pat@medcare.com','Megha','Joshi','pat123','9823067890',500,'ROLE_PATIENT'),
+(17,'2025-10-07','2025-10-11 11:30:00','1989-02-27','nikhil.pat@medcare.com','Nikhil','Kamble','pat123','9823078901',650,'ROLE_PATIENT'),
+(18,'2025-10-07','2025-10-11 11:35:00','1996-07-14','pooja.pat@medcare.com','Pooja','Chavan','pat123','9823089012',550,'ROLE_PATIENT'),
+(19,'2025-10-08','2025-10-11 11:40:00','1993-11-21','arjun.pat@medcare.com','Arjun','Kulkarni','pat123','9823090123',450,'ROLE_PATIENT'),
+(20,'2025-10-08','2025-10-11 11:45:00','2000-01-10','swati.pat@medcare.com','Swati','Deshpande','pat123','9823001234',700,'ROLE_PATIENT');
+
+
+INSERT INTO doctors
+(created_on, last_updated, experience_in_years, fees, qualifications, speciality, user_id)
+VALUES
+('2025-10-01', '2025-10-10 11:00:00', 20, 1200, 'MD (Medicine)',        'Physician',       1),
+('2025-10-01', '2025-10-10 11:00:00', 15, 1000, 'MD (Gynecology)',      'Gynecologist',    2),
+('2025-10-03', '2025-10-11 10:00:00', 18, 1500, 'MS (Orthopedics)',     'Orthopedic',      6),
+('2025-10-03', '2025-10-11 10:10:00', 12,  900, 'MD (Dermatology)',    'Dermatologist',   7),
+('2025-10-04', '2025-10-11 10:20:00', 17, 1400, 'MD (Cardiology)',      'Cardiologist',    8),
+('2025-10-04', '2025-10-11 10:30:00', 10,  800, 'MD (Pediatrics)',      'Pediatrician',    9),
+('2025-10-04', '2025-10-11 10:40:00', 14, 1100, 'MS (ENT)',             'ENT Specialist', 10);
+
+INSERT INTO patients
+(created_on, last_updated, blood_group, family_history, gender, user_id)
+VALUES
+('2025-10-02', '2025-10-10 12:00:00', 'O_POSITIVE',  'Diabetes',          'MALE',   3),
+('2025-10-02', '2025-10-10 12:00:00', 'A_POSITIVE',  'Hypertension',      'FEMALE', 4),
+('2025-10-05', '2025-10-11 11:00:00', 'B_POSITIVE',  'None',              'MALE',   11),
+('2025-10-05', '2025-10-11 11:05:00', 'O_NEGATIVE',  'Asthma',            'FEMALE', 12),
+('2025-10-06', '2025-10-11 11:10:00', 'AB_POSITIVE', 'Heart Disease',     'MALE',   13),
+('2025-10-06', '2025-10-11 11:15:00', 'A_NEGATIVE',  'Thyroid Disorder',  'FEMALE', 14),
+('2025-10-06', '2025-10-11 11:20:00', 'O_POSITIVE',  'None',              'MALE',   15),
+('2025-10-07', '2025-10-11 11:25:00', 'B_NEGATIVE',  'Anemia',            'FEMALE', 16),
+('2025-10-07', '2025-10-11 11:30:00', 'A_POSITIVE',  'Hypertension',      'MALE',   17),
+('2025-10-07', '2025-10-11 11:35:00', 'O_POSITIVE',  'None',              'FEMALE', 18),
+('2025-10-08', '2025-10-11 11:40:00', 'AB_NEGATIVE', 'Diabetes',          'MALE',   19),
+('2025-10-08', '2025-10-11 11:45:00', 'B_POSITIVE',  'None',              'FEMALE', 20);
+
+
+
+INSERT INTO diagnostic_tests (test_id, created_on, last_updated, description, name, price)
+VALUES
+(1, '2025-10-01', '2025-10-01 12:00:00', 'Complete blood count (CBC)', 'Blood Test', 500),
+(2, '2025-10-01', '2025-10-01 12:00:00', 'Electrocardiogram test for heart', 'ECG', 1000),
+(3, '2025-10-01', '2025-10-01 12:00:00', 'Chest X-Ray screening', 'X-Ray', 800),
+(4, '2025-10-01', '2025-10-01 12:00:00', 'Brain MRI scan', 'MRI', 5000);
+
+
+INSERT INTO appointments 
+(appointment_id, created_on, last_updated, appointment_date_time, status, doctor_id, patient_id)
+VALUES
+-- UPCOMING appointments
+(1, '2025-10-05', '2025-12-25 10:00:00', '2026-01-10 10:30:00', 'SCHEDULED', 1, 1),
+(2, '2025-10-06', '2025-12-26 11:00:00', '2026-01-22 14:00:00', 'SCHEDULED', 2, 2),
+(3, '2025-10-07', '2025-12-27 12:00:00', '2026-02-25 09:00:00', 'SCHEDULED', 3, 4),
+(4, '2025-09-20', '2025-09-20 09:30:00', '2026-01-11 10:00:00', 'SCHEDULED', 3, 1),
+(5, '2025-09-22', '2025-09-22 11:15:00', '2026-01-12 16:30:00', 'SCHEDULED', 4, 5),
+
+-- CANCELLED appointments
+(6, '2025-09-25', '2025-09-25 14:00:00', '2025-10-05 11:00:00', 'CANCELLED', 1, 2);
+
+
