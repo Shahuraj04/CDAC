@@ -10,7 +10,8 @@
             get { return _fileLogger; }
         }
 
-        public void Log(string message) {
+        public void Log(string message)
+        {
             string path = "D:\\CDAC\\.NET\\MVCDemo\\Log.txt";
 
             FileStream stream = null;
@@ -18,7 +19,8 @@
             {
                 stream = new FileStream(path, FileMode.Append, FileAccess.Write);
             }
-            else { 
+            else
+            {
                 stream = new FileStream(path, FileMode.Create, FileAccess.Write);
             }
             StreamWriter writer = new StreamWriter(stream);

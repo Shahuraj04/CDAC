@@ -32,9 +32,10 @@ namespace MVCDemo.Controllers
                     return View(user);
                 }
             }
-            else {
+            else
+            {
                 return View();
-                    }
+            }
         }
         public IActionResult SignOut()
         {

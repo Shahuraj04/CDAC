@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using MVCDemo.Filters;
 using MVCDemo.Models;
 namespace MVCDemo.Controllers
@@ -7,15 +6,15 @@ namespace MVCDemo.Controllers
     [LogFilter]
     public class HomeController : Controller
     {
-        StudentViewModel studentViewModel = new StudentViewModel(); 
+        StudentViewModel studentViewModel = new StudentViewModel();
 
 
         [AuthFilter]
         public IActionResult Index()
         {
             ViewBag.Title = "Home";
-            ViewBag.UserName= GetUserName();
-            List<Student> students = studentViewModel.GetStudents();    
+            ViewBag.UserName = GetUserName();
+            List<Student> students = studentViewModel.GetStudents();
 
 
 
@@ -24,25 +23,29 @@ namespace MVCDemo.Controllers
         }
 
         [AuthFilter]
-        public IActionResult Create() {
+        public IActionResult Create()
+        {
 
             return View();
         }
 
-       
-        [HttpPost]
-        public IActionResult Create(Student student) {
 
-            if (ModelState.IsValid) {
+        [HttpPost]
+        public IActionResult Create(Student student)
+        {
+
+            if (ModelState.IsValid)
+            {
                 studentViewModel.AddStudent(student);
                 return Redirect("/Home/Index");
 
-            
+
             }
-            else {
+            else
+            {
                 ViewBag.Message = "Validation Failed";
                 return View(student);
-                }
+            }
         }
 
 
@@ -66,11 +69,12 @@ namespace MVCDemo.Controllers
                 {
                     return Redirect("/Home/Index");
                 }
-                else {
+                else
+                {
                     ViewBag.Message = "FAiled to update record";
                     return View(updatedstudent);
-                        }
-                    return Redirect("/Home/Index");
+                }
+
 
 
             }
@@ -86,7 +90,7 @@ namespace MVCDemo.Controllers
         {
             studentViewModel.DeleteStudent(Id);
             return Redirect("/Home/Index");
-        
+
         }
 
         public IActionResult About()
@@ -100,10 +104,12 @@ namespace MVCDemo.Controllers
             return View();
         }
 
-        private string GetUserName() {
+        private string GetUserName()
+        {
 
 
-            if (HttpContext.Session.GetString("UserName") != null && HttpContext.Session.GetString("UserName") != "") {
+            if (HttpContext.Session.GetString("UserName") != null && HttpContext.Session.GetString("UserName") != "")
+            {
 
                 return HttpContext.Session.GetString("UserName");
             }

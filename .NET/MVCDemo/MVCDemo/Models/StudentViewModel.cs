@@ -1,28 +1,28 @@
 ﻿using Microsoft.Data.SqlClient;
-using MVCDemo.Models;
-using System.Reflection.Metadata.Ecma335;
 namespace MVCDemo.Models
 {
     public class StudentViewModel
     {
         string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=EndModule;Integrated Security=True";
-        public List<Student> GetStudents() {
+        public List<Student> GetStudents()
+        {
 
             List<Student> students = new List<Student>();
-            SqlConnection connection  = new SqlConnection(connectionString);
+            SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
 
             SqlCommand command = new SqlCommand("Select * from Student", connection);
 
             SqlDataReader reader = command.ExecuteReader();
-            while (reader.Read()) { 
-            
+            while (reader.Read())
+            {
+
                 Student student = new Student();
                 student.No = Convert.ToInt32(reader["No"]);
                 student.Name = reader["Name"].ToString();
                 student.Address = reader["Address"].ToString();
                 student.Email = reader["Email"].ToString();
-                student.Age = Convert.ToInt32(reader["Age"]);   
+                student.Age = Convert.ToInt32(reader["Age"]);
                 students.Add(student);
             }
 
@@ -30,7 +30,8 @@ namespace MVCDemo.Models
             return students;
         }
 
-        public Student GetStudent(int No) {
+        public Student GetStudent(int No)
+        {
 
             List<Student> students = GetStudents();
             Student filteredStudent = (from student in students
@@ -41,12 +42,12 @@ namespace MVCDemo.Models
 
         public int AddStudent(Student student)
         {
-            SqlConnection sqlConnection= new SqlConnection(connectionString);
+            SqlConnection sqlConnection = new SqlConnection(connectionString);
             sqlConnection.Open();
 
             string queryFormat = "insert into Student(Name,Address,Age,Email,IsEMailValidated) values('{0}','{1}',{2},'{3}','{4}')";
 
-                string query = string.Format(queryFormat, student.Name, student.Address, student.Age, student.Email, false);
+            string query = string.Format(queryFormat, student.Name, student.Address, student.Age, student.Email, false);
 
             SqlCommand command = new SqlCommand(query, sqlConnection);
             int rowsAffected = command.ExecuteNonQuery();
@@ -65,7 +66,7 @@ namespace MVCDemo.Models
             string query = string.Format(queryFormat, student.Name, student.Address, student.Age, student.Email, student.No);
 
             SqlCommand command = new SqlCommand(query, sqlConnection);
-                int rowsAffected = command.ExecuteNonQuery();
+            int rowsAffected = command.ExecuteNonQuery();
             sqlConnection.Close();
             return rowsAffected;
 
@@ -82,7 +83,7 @@ namespace MVCDemo.Models
 
             SqlCommand command = new SqlCommand(query, sqlConnection);
             int rowsAffected = command.ExecuteNonQuery();
-                sqlConnection.Close();
+            sqlConnection.Close();
             return rowsAffected;
 
         }

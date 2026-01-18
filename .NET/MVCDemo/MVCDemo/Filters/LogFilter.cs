@@ -2,7 +2,7 @@
 using MVCDemo.Logger;
 namespace MVCDemo.Filters
 {
-    public class LogFilter:ActionFilterAttribute
+    public class LogFilter : ActionFilterAttribute
     {
         public override void OnActionExecuting(ActionExecutingContext context)
         {
