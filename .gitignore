@@ -7,3 +7,4 @@ application.properties
 
 # OR ignore only this path (recommended)
 Project/demo/demo/src/main/resources/application.properties
+/src/main/resources/application.properties
