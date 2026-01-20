@@ -2,3 +2,8 @@
 bin/
 obj/
 *.db
+# Ignore Spring Boot config
+application.properties
+
+# OR ignore only this path (recommended)
+Project/demo/demo/src/main/resources/application.properties
