@@ -6,22 +6,41 @@ namespace MVCDemo
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
+            // --- SECTION 1: ADD SERVICES (The Ingredients) ---
+            // Everything starting with builder.Services MUST be here
+
             builder.Services.AddControllersWithViews();
             builder.Services.AddSession();
 
+            // FIX: Moved AddCors ABOVE builder.Build()
+            builder.Services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(policy =>
+                {
+                    policy.AllowAnyOrigin()
+                          .AllowAnyMethod()
+                          .AllowAnyHeader();
+                });
+            });
+
+            // --- SECTION 2: BUILD THE APP ---
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
+            // --- SECTION 3: CONFIGURE MIDDLEWARE (The Pipeline) ---
+            // From here on, you use 'app', not 'builder'
+
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
             app.UseStaticFiles();
-
             app.UseRouting();
-            app.UseSession();
 
+            // FIX: UseCors should usually be between UseRouting and UseAuthorization
+            app.UseCors();
+
+            app.UseSession();
             app.UseAuthorization();
 
             app.MapControllerRoute(

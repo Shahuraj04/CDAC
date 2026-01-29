@@ -6,3 +6,27 @@
 15-12-2025 16:07:05 : Action Method executed /Login/SignIn
 15-12-2025 16:07:06 : Action Method /Home/Index
 15-12-2025 16:07:06 : Action Method executed /Home/Index
+29-01-2026 21:51:49 : Action Method /
+29-01-2026 21:51:52 : Action Method executed /
+29-01-2026 21:51:52 : Action Method /Login/SignIn
+29-01-2026 21:51:52 : Action Method executed /Login/SignIn
+29-01-2026 21:52:18 : Action Method /Login/SignIn
+29-01-2026 21:52:18 : Action Method executed /Login/SignIn
+29-01-2026 21:52:39 : Action Method /Login/SignIn
+29-01-2026 21:52:39 : Action Method executed /Login/SignIn
+29-01-2026 21:52:47 : Action Method /Login/SignIn
+29-01-2026 21:52:47 : Action Method executed /Login/SignIn
+29-01-2026 21:52:55 : Action Method /Login/SignIn
+29-01-2026 21:52:55 : Action Method executed /Login/SignIn
+29-01-2026 21:53:14 : Action Method /Login/SignIn
+29-01-2026 21:53:14 : Action Method executed /Login/SignIn
+29-01-2026 21:53:27 : Action Method /Home/Index
+29-01-2026 21:53:27 : Action Method executed /Home/Index
+29-01-2026 21:53:27 : Action Method /Login/SignIn
+29-01-2026 21:53:27 : Action Method executed /Login/SignIn
+29-01-2026 22:22:39 : Action Method /
+29-01-2026 22:22:42 : Action Method executed /
+29-01-2026 22:22:42 : Action Method /Login/SignIn
+29-01-2026 22:22:42 : Action Method executed /Login/SignIn
+29-01-2026 22:23:38 : Manual Test from Postman
+29-01-2026 22:32:18 : Method [registerUser] executed. Info: New User Registration Attempt
