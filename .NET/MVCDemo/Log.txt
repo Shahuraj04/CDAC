@@ -39,3 +39,15 @@
 30-01-2026 12:56:23 : Action Method /Login/SignIn
 30-01-2026 12:56:23 : Action Method executed /Login/SignIn
 30-01-2026 12:56:33 : Method [registerUser] executed. Info: New User Registration Attempt
+01-02-2026 22:06:14 : Action Method /
+01-02-2026 22:06:20 : Action Method executed /
+01-02-2026 22:06:20 : Action Method /Login/SignIn
+01-02-2026 22:06:20 : Action Method executed /Login/SignIn
+01-02-2026 22:06:42 : Action Method /Login/SignIn
+01-02-2026 22:06:42 : Action Method executed /Login/SignIn
+01-02-2026 22:06:48 : Action Method /Login/SignIn
+01-02-2026 22:06:48 : Action Method executed /Login/SignIn
+01-02-2026 22:07:10 : Method [authenticateUser] executed. Info: Login attempt
+01-02-2026 22:14:12 : User: [shahu@gmail.com] | Method: [authenticateUser] | Body: {"email":"shahu@gmail.com","password":"pass123"} | Info: Login attempt
+01-02-2026 22:18:43 : User: [shahu@gmail.com] | Method: [authenticateUser] | Body: {"email":"shahu@gmail.com","password":"pass123"} | Info: Login attempt
+01-02-2026 22:19:43 : User: [shahu@gmail.com] | Method: [authenticateUser] | Response: {"headers":{},"body":{"jwt":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX3JvbGUiOiJST0xFX0FETUlOIiwidXNlcl9pZCI6MTEsInN1YiI6InNoYWh1QGdtYWlsLmNvbSIsImlhdCI6MTc2OTk2NDU4MywiZXhwIjoxNzcwMDUwOTgzfQ.upDma6-namu1BhM-MZ3riuEiiBcFwEWxQB7rw776BIM","email":"shahu@gmail.com","role":"ROLE_ADMIN","id":11},"statusCode":"OK","statusCodeValue":200} | Info: Login attempt
