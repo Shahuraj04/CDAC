@@ -1,6 +1,0 @@
-id	email	role
-1	admin@company.com	ROLE_ADMIN
-2	alice.hr@company.com	ROLE_HR
-3	john.doe@company.com	ROLE_EMPLOYEE
-4	sarah.smith@company.com	ROLE_EMPLOYEE
-5	shahu@company.com	ROLE_EMPLOYEE
