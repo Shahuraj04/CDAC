@@ -4,4 +4,5 @@
     <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.SWAP"/>
     <fullyQualifiedTypeName name="sorting.BubbleSort"/>
     <fullyQualifiedTypeName name="java.awt.image.Kernel"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>
