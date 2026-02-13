@@ -18,3 +18,21 @@ spring.jpa.open-in-view=false
 # --- Security ---
 jwt.secret=413F4428472B4B6250655368566D59703373367639792442264529482B4D6251
 jwt.expiration.time=86400000
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+mysql -h database-2.claswgq60m17.eu-north-1.rds.amazonaws.com -P 3306 -u admin -p
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Key	Value	Notes
+DB_HOST	database-2.claswgq60m17.eu-north-1.rds.amazonaws.com	Your AWS RDS endpoint
+DB_PORT	3306	Default MySQL port
+DB_NAME	one_HR	Your database name
+DB_USER	admin	AWS RDS username
+DB_PASS	shahuraj123	AWS RDS password
+JWT_SECRET	413F4428472B4B6250655368566D59703373367639792442264529482B4D6251	Your JWT secret
+_________________________________________________________________________________________________________-
+
+https://onehr360.netlify.app/
+___________________________________________________________________________
+https://one-hr-n4e6.onrender.com
