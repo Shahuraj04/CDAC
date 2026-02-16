@@ -37,7 +37,7 @@
 ┌─────────────────────────────────────────────────────────────────┐
 │                         CLIENT LAYER                             │
 │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐         │
-│  │   React UI   │  │ SockJS Client│  │ STOMP Client │         │
+│  │   React UI   │       │ SockJS Client│  │ STOMP Client │       				  |
 │  └──────────────┘  └──────────────┘  └──────────────┘         │
 └─────────────────────────────────────────────────────────────────┘
                               ↓
@@ -129,7 +129,8 @@
 **Performance Comparison:**
 ```
 HTTP Polling:
-- Message delay: 1-5 seconds (polling interval)
+- 
+Message delay: 1-5 seconds (polling interval)
 - Bandwidth: ~500 bytes per poll × 1 poll/sec = 500 bytes/sec idle
 - Server load: High (constant connections)
 
@@ -174,23 +175,23 @@ content-length:82
 
 ```
 ┌─────────────────────────────────┐
-│     Application Layer           │
-│  (Chat Messages, Business Logic)│
+│     Application Layer                     │
+│  (Chat Messages, Business Logic)          │
 └─────────────────────────────────┘
                ↓
 ┌─────────────────────────────────┐
-│       STOMP Protocol            │
-│  (Frame-based Messaging)        │
+│       STOMP Protocol            			│
+│  (Frame-based Messaging)      		    │
 └─────────────────────────────────┘
                ↓
 ┌─────────────────────────────────┐
-│      WebSocket Protocol         │
-│  (Bidirectional Binary/Text)    │
+│      WebSocket Protocol         			│
+│  (Bidirectional Binary/Text)    			│
 └─────────────────────────────────┘
                ↓
 ┌─────────────────────────────────┐
-│         TCP/IP Layer            │
-│  (Reliable Byte Stream)         │
+│         TCP/IP Layer            			│
+│  (Reliable Byte Stream)         			│
 └─────────────────────────────────┘
 ```
 
@@ -1080,7 +1081,7 @@ This is why we save to database first—message is never lost, just delayed deli
 - Cons: Additional complexity, infrastructure, cost
 - Use case: Production, multiple servers, high traffic
 
-**Example:**
+ 
 ```
 SimpleBroker:
 - 1 server, 1000 users ✓
