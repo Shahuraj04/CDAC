@@ -1,0 +1,83 @@
+1. How does the system show different dashboards for different roles?
+Interview Context: This tests your understanding of Role-Based Access Control (RBAC) and Conditional Rendering in React.
+
+The Logic: In the 
+Dashboard.jsx
+ component, we retrieve the user's role (e.g., ROLE_ADMIN, ROLE_HR, ROLE_EMPLOYEE) from the session data (stored in localStorage or managed via a hook).
+Implementation:
+Conditional Components: We use a ternary operator or logical AND (&&) to render specific sub-dashboards.
+jsx
+{userData.role === 'ROLE_ADMIN' && <AdminDashboard />}
+{userData.role === 'ROLE_HR' && <HRDashboard />}
+{userData.role === 'ROLE_EMPLOYEE' && <EmployeeDashboard />}
+Shared Layout: All roles use a common 
+Sidebar
+ and Header, but the 
+Sidebar
+ itself is dynamic. It checks the role to determine which navigation links to display (e.g., only HR/Admin see the "Employee Management" link).
+Tricky Question: "How do you prevent a user from manually typing /employees in the URL if they don't have permission?"
+Answer: I implemented Route Guarding. In the 
+App.jsx
+ or a dedicated ProtectedRoute wrapper, we check the user's role against the required permissions for that path. If they don't match, we redirect them to the unauthorized page or the main dashboard.
+2. How is the CSV file download implemented?
+Interview Context: This tests your knowledge of Web APIs and Client-side data processing.
+
+The Logic: Instead of requesting a file from the server, we fetch the raw JSON data and convert it to CSV format on the client side for better performance and lower server load.
+Technical Steps (using 
+csvExport.js
+):
+Data Transformation: We take an array of objects (like attendance records) and map them into a string where values are separated by commas and rows by newlines.
+The Blob API: We create a new Blob (Binary Large Object) containing the CSV string with the MIME type text/csv.
+The createObjectURL Tool: We generate a temporary URL for this Blob using URL.createObjectURL(blob).
+The Hidden Anchor Hack: We programmatically create a <a> element, set its href to the Blob URL and its download attribute to the desired filename.
+Trigger & Cleanup: We simulate a .click() on the link and then immediately URL.revokeObjectURL(url) to free up memory.
+Tricky Question: "What happens if the data contains commas? Won't that break the CSV structure?"
+Answer: To handle this, we should wrap values in double quotes or use a library like PapaParse. In a custom implementation, we ensure strings are sanitized or deliminated properly to avoid "comma injection."
+3. How did you make Custom Hooks? (e.g., 
+useAuth
+, 
+useChat
+)
+Interview Context: Tests your ability to abstract logic and follow the DRY (Don't Repeat Yourself) principle.
+
+useAuth
+ Implementation: This hook centralizes login, logout, and user state.
+It uses useState to track the current user and useEffect to check localStorage on initial mount to see if a session already exists.
+It returns an object containing { user, login, logout, isAuthenticated }.
+useChat
+ Implementation: This is a more complex hook that manages a WebSocket connection.
+It encapsulates the logic for connecting to the STOMP/WebSocket server, subscribing to specific topics (like /user/{id}/queue/messages), and handling "typing" indicators.
+By putting this in a hook, we can use the same chat logic in both a small popup or a full Chat Page without duplicating code.
+Tricky Question: "Why use a custom hook instead of just putting the logic in a component?"
+Answer: Separation of concerns. It makes the UI components "dumb" (focusing only on rendering) while the hooks handle the "smart" business logic and side effects. It also makes the logic unit-testable in isolation.
+4. How do general hooks like useContext and useSession work?
+Interview Context: Checks your depth of React knowledge.
+
+useContext (The Prop-Drilling Killer):
+It allows us to share data (like the current Theme or User Profile) across the entire component tree without passing props manually at every level.
+Flow: Create a Context → Provide it at the top level (<AuthContext.Provider value={...}>) → Consume it anywhere using useContext(AuthContext).
+useSession (Conceptual):
+While not a native React hook (often provided by libraries like NextAuth), in our project, we use a custom version or 
+useAuth
+ to represent the "Session."
+It works by listening to the authentication state. If the JWT token expires or is removed, the hook updates, causing all dependent components to re-render (e.g., hiding the dashboard and showing the login screen).
+Tricky Question: "If I use useContext for everything, will my app become slow?"
+Answer: Yes, potentially. Every time the Context value changes, all components consuming that context will re-render. For high-frequency updates, we should use specialized state management like Redux or split the context into smaller, more specific ones.
+5. Bonus: Tricky "Scenario" Interview Questions
+Q: "If two people are chatting, how do you ensure the chat doesn't lag?"
+A: I used Optimistic UI Updates in my 
+useChat
+ hook. When a user sends a message, we immediately add it to the local messages state before the server even confirms it. If the server fails, we roll back the change.
+Q: "How did you handle the JWT token securely?"
+A: The token is stored in localStorage for persistence, but for a production-grade app, I would recommend HttpOnly Cookies to prevent XSS (Cross-Site Scripting) attacks where malicious scripts could steal the token.
+Q: "How does the backend handle large CSV exports without crashing?"
+A: Currently, we fetch data and process it on the client. If the data were massive (e.g., 1 million rows), I would implement streaming on the backend, where the Spring Boot server writes the CSV directly to the response output stream one row at a time instead of loading the whole list into memory.
+Summary Checklist for your Interview:
+RBAC: Role checks in UI + Protected Routes.
+CSV: Blob API + Object URLs + Hidden Link.
+Hooks: 
+useAuth
+ for state, 
+useChat
+ for side-effects/websockets.
+State Management: LocalStorage for persistence + Component State for reactivity.
