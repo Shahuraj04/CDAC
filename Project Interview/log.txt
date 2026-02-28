@@ -1,9 +1,0 @@
-Logged at: 10-12-2025 15:10:29-Received call for: /
-Logged at: 10-12-2025 15:10:44-Action Executed: /
-Logged at: 10-12-2025 15:10:44-UI is getting processed
-Logged at: 10-12-2025 15:10:44-UI is procesing!!!
-Logged at: 10-12-2025 15:10:51-Received call for: /Home/Create
-Logged at: 10-12-2025 15:10:53-Action Executed: /Home/Create
-Logged at: 10-12-2025 15:10:53-UI is getting processed
-Logged at: 10-12-2025 15:10:53-UI is procesing!!!
-Logged at: 10-12-2025 15:10:55-Received call for: /Home/Create
