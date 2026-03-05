@@ -12,7 +12,7 @@
 
         public void Log(string message)
         {
-            string path = "D:\\CDAC\\.NET\\MVCDemo\\Log.txt";
+            string path = "D:\\Log.txt";
 
             FileStream stream = null;
             if (File.Exists(path))

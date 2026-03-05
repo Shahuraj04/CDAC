@@ -51,3 +51,10 @@
 01-02-2026 22:14:12 : User: [shahu@gmail.com] | Method: [authenticateUser] | Body: {"email":"shahu@gmail.com","password":"pass123"} | Info: Login attempt
 01-02-2026 22:18:43 : User: [shahu@gmail.com] | Method: [authenticateUser] | Body: {"email":"shahu@gmail.com","password":"pass123"} | Info: Login attempt
 01-02-2026 22:19:43 : User: [shahu@gmail.com] | Method: [authenticateUser] | Response: {"headers":{},"body":{"jwt":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX3JvbGUiOiJST0xFX0FETUlOIiwidXNlcl9pZCI6MTEsInN1YiI6InNoYWh1QGdtYWlsLmNvbSIsImlhdCI6MTc2OTk2NDU4MywiZXhwIjoxNzcwMDUwOTgzfQ.upDma6-namu1BhM-MZ3riuEiiBcFwEWxQB7rw776BIM","email":"shahu@gmail.com","role":"ROLE_ADMIN","id":11},"statusCode":"OK","statusCodeValue":200} | Info: Login attempt
+06-03-2026 00:01:18 : Action Method /
+06-03-2026 00:01:25 : Action Method executed /
+06-03-2026 00:01:25 : Action Method /Login/SignIn
+06-03-2026 00:01:25 : Action Method executed /Login/SignIn
+06-03-2026 00:03:26 : Method [authenticateUser] executed. Info: Login attempt
+06-03-2026 00:04:19 : Method [authenticateUser] executed. Info: Login attempt
+06-03-2026 00:05:12 : Method [authenticateUser] executed. Info: Login attempt
